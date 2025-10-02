@@ -1,0 +1,16 @@
+{
+  "name": "Kangaroo AJ S.A.S.",
+  "short_name": "K-AJ",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0A7CFF",
+  "icons": [
+    {
+      "src": "/assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
