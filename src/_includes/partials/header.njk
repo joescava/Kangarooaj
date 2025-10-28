@@ -1,0 +1,24 @@
+<header class="site-header" role="banner">
+  <div class="container header-grid">
+    <a class="logo" href="{{ '/' | url }}">
+      <img src="/assets/images/logo.svg" alt="Kangarooo AJ SAS" width="120" height="32">
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav id="nav" class="site-nav" aria-label="Principal">
+      <ul>
+        <li>
+          <a href="{{ '/' | url }}">{{ 'nav.home' | i18n }}</a>
+        </li>
+        <li>
+          <a href="{{ '/services/' | url }}">{{ 'nav.services' | i18n }}</a>
+        </li>
+        <li>
+          <a href="{{ '/about/' | url }}">{{ 'nav.about' | i18n }}</a>
+        </li>
+        <li>
+          <a href="{{ '/contact/' | url }}">{{ 'nav.contact' | i18n }}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,20 @@
+{
+  "url": "https://kangarooaj.com",
+  "title": "Kangarooo AJ SAS",
+  "defaultLang": "es",
+  "i18n": {
+    "nav": {
+      "home": "Inicio",
+      "services": "Servicios",
+      "about": "Nosotros",
+      "contact": "Contacto",
+      "privacy": "Privacidad",
+      "terms": "Términos"
+    },
+    "cta": { "book": "Agenda una llamada", "demo": "Solicita demo" }
+  },
+  "social": {
+    "x": "https://x.com/kangarooaj",
+    "linkedin": "https://www.linkedin.com/company/kangarooaj"
+  }
+}

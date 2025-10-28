@@ -1,0 +1,34 @@
+---
+layout: page.njk
+title: "Contacto"
+description: "Hablemos de tus KPIs y prioricemos un piloto de 4 semanas."
+permalink: "/contact/"
+canonical: "https://kangarooaj.com/contact/"
+---
+<h1>Contacto</h1>
+<p>Cuéntanos tu caso. Respondemos en 1–2 días hábiles.</p>
+
+<div class="grid-2">
+  <form class="contact-form" action="mailto:{{EMAIL_CONTACTO}}" method="post" enctype="text/plain" aria-describedby="contact-help">
+    <div>
+      <label for="name">Nombre</label><input id="name" name="Nombre" type="text" required autocomplete="name"></div>
+    <div>
+      <label for="email">Correo</label><input id="email" name="Email" type="email" required autocomplete="email"></div>
+    <div>
+      <label for="message">Mensaje</label>
+      <textarea id="message" name="Mensaje" rows="5" required></textarea>
+    </div>
+    <p id="contact-help" class="help">Se abrirá tu cliente de correo. No almacenamos tus datos.</p>
+    <button class="btn" type="submit">Enviar</button>
+  </form>
+
+  <aside class="contact-info" aria-label="Opciones alternativas">
+    <h2>Opción con servicio externo</h2>
+    <p>Si prefieres usar un servicio de formularios: Formspree o Netlify Forms.</p>
+    <pre class="code" aria-label="Ejemplo Formspree">
+&lt;form action="https://formspree.io/f/XXXXX" method="POST"&gt;...&lt;/form&gt;
+    </pre>
+    <p>Correo: <a href="mailto:{{EMAIL_CONTACTO}}">{{EMAIL_CONTACTO}}</a>
+    </p>
+  </aside>
+</div>

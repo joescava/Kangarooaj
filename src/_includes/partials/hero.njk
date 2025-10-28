@@ -1,0 +1,19 @@
+<section class="hero" aria-label="Sección principal">
+  <div class="hero-bg {{ pattern or 'mesh' }}"></div>
+  <div class="hero-inner">
+    {% if kicker %}
+      <p class="kicker">{{ kicker }}</p>
+    {% endif %}
+    <h1>{{ title }}</h1>
+    <p class="lead">{{ subtitle }}</p>
+    {% if badges %}
+      <p class="badges">
+        {% for b in badges %}{{ badgeAI(b) }}
+        {% endfor %}
+      </p>
+    {% endif %}
+    <p>
+      <a class="btn btn-primary" href="{{ ctaHref }}">{{ ctaText }}</a>
+    </p>
+  </div>
+</section>

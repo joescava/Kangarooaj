@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+  <head>{% include "partials/head.njk" %}</head>
+  <body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    {% include "partials/header.njk" %}
+    <main id="main" class="container">
+      {% block content %}{% endblock %}
+    </main>
+    {% include "partials/footer.njk" %}
+    <script type="module" src="/assets/js/main.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator
+          .serviceWorker
+          .register('/sw.js')
+          .catch(() => {});
+      }
+    </script>
+  </body>
+</html>

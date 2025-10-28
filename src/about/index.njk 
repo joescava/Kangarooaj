@@ -1,0 +1,27 @@
+---
+layout: page.njk
+title: "Nosotros"
+description: "Kangarooo AJ SAS: equipo de producto y tecnología para soluciones con IA."
+permalink: "/about/"
+canonical: "https://kangarooaj.com/about/"
+---
+<h1>Nosotros</h1>
+<p>Diseñamos e implementamos soluciones de {{SECTOR}} con enfoque en valor de negocio y buenas prácticas.</p>
+
+<section class="section">
+  <h2>Enfoque responsable de IA</h2>
+  <ul class="check">
+    <li>Privacidad y aislamiento de datos del cliente.</li>
+    <li>Evaluación humana y métricas de calidad.</li>
+    <li>Transparencia de fuentes y límites del sistema.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Equipo</h2>
+  <div class="grid-3">
+    <article class="card"><h3>Dirección de Producto</h3><p>Define KPIs y prioriza entregables con clientes.</p></article>
+    <article class="card"><h3>Arquitectura y Data</h3><p>Modelos, prompts, pipelines y seguridad.</p></article>
+    <article class="card"><h3>Frontend/UX</h3><p>Interfaces accesibles y medibles, listas para producción.</p></article>
+  </div>
+</section>

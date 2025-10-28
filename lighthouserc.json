@@ -1,0 +1,15 @@
+{
+  "ci": {
+    "collect": { "startServerCommand": "npm run serve" },
+    "assert": {
+      "assertions": {
+        "categories:performance": ["error", { "minScore": 0.9 }],
+        "categories:accessibility": ["error", { "minScore": 0.95 }],
+        "categories:seo": ["error", { "minScore": 0.9 }],
+        "uses-responsive-images": "warn",
+        "largest-contentful-paint": ["warn", { "maxNumericValue": 2500 }]
+      }
+    },
+    "upload": { "target": "temporary-public-storage" }
+  }
+}

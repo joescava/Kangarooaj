@@ -1,0 +1,33 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <nav class="site-subnav" aria-label="Secundaria">
+      <ul>
+        <li>
+          <a href="{{ '/' | url }}">{{ 'nav.home' | i18n }}</a>
+        </li>
+        <li>
+          <a href="{{ '/services/' | url }}">{{ 'nav.services' | i18n }}</a>
+        </li>
+        <li>
+          <a href="{{ '/about/' | url }}">{{ 'nav.about' | i18n }}</a>
+        </li>
+        <li>
+          <a href="{{ '/contact/' | url }}">{{ 'nav.contact' | i18n }}</a>
+        </li>
+        <li>
+          <a href="{{ '/privacy/' | url }}">{{ 'nav.privacy' | i18n }}</a>
+        </li>
+        <li>
+          <a href="{{ '/terms/' | url }}">{{ 'nav.terms' | i18n }}</a>
+        </li>
+      </ul>
+    </nav>
+    <p>{{ site.title }} · {{ brand.cityCountry }}</p>
+    <p class="pwa-badge">PWA lista <span aria-hidden="true">•</span>
+      <a href="/manifest.webmanifest">manifest</a>
+    </p>
+    <p>
+      <a href="{{ site.social.linkedin }}">LinkedIn</a> · <a href="{{ site.social.x }}">X</a>
+    </p>
+  </div>
+</footer>

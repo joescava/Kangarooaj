@@ -1,0 +1,45 @@
+{
+  "name": "kangarooaj",
+  "version": "1.0.0",
+  "description": "Corporate static site with Eleventy, i18n, a11y and PWA.",
+  "type": "module",
+  "scripts": {
+    "clean": "rm -rf _site .cache .workbox-dist",
+    "dev:11ty": "ELEVENTY_ENV=development npx @11ty/eleventy --serve --quiet",
+    "dev:css": "postcss src/assets/css/styles.css -o _site/assets/css/styles.css --watch",
+    "build": "npm run clean && npm run build:11ty && npm run build:css && node scripts/build-sw.mjs",
+    "build:11ty": "ELEVENTY_ENV=production npx @11ty/eleventy",
+    "build:css": "postcss src/assets/css/styles.css -o _site/assets/css/styles.css",
+    "preview": "npx http-server _site -c-1 -p 8080",
+    "format": "prettier --write .",
+    "lint:a11y": "pa11y-ci"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joescava/Kangarooaj.git"
+  },
+  "keywords": [
+    "eleventy",
+    "static-site",
+    "a11y",
+    "pwa",
+    "i18n"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joescava/Kangarooaj/issues"
+  },
+  "homepage": "https://kangarooaj.com/",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-img": "^5.0.0",
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^6.1.2",
+    "http-server": "^14.1.1",
+    "pa11y-ci": "^3.1.0",
+    "postcss": "^8.4.47",
+    "postcss-cli": "^11.0.1",
+    "prettier": "^3.6.2"
+  }
+}

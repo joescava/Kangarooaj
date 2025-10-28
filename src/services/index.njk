@@ -1,0 +1,81 @@
+---
+layout: page.njk
+title: "Servicios de IA y software"
+description: "Arquitectura, implementación y soporte de soluciones de IA. Entregables claros y KPIs."
+permalink: "/services/"
+canonical: "https://kangarooaj.com/services/"
+---
+<h1>Servicios</h1>
+
+<section class="section">
+  <h2>Catálogo</h2>
+  <div class="grid-3">
+    {% include "partials/card-service.njk", {
+      title: "Asistentes de atención",
+      desc: "Bots y copilotos conectados a tu knowledge base. Integración con CRM y canales.",
+      deliverables: ["Arquitectura + prompts","Flows y fallback a humano","Métricas AHT/CSAT"],
+      kpis: ["AHT ↓20–40%","CSAT ↑","Resolución ↑"]
+    } %}
+    {% include "partials/card-service.njk", {
+      title: "Automatización documental",
+      desc: "Extracción y validación de datos en facturas, órdenes y contratos.",
+      deliverables: ["Pipelines","Validación humana","Trazabilidad"],
+      kpis: ["Tiempo ↓50%","Errores ↓","Cumplimiento ↑"]
+    } %}
+    {% include "partials/card-service.njk", {
+      title: "RAG en datos propios",
+      desc: "Búsqueda y respuestas con citaciones y control de acceso.",
+      deliverables: ["Ingesta","Indexación","Evaluación"],
+      kpis: ["Hallazgo ↑","Confianza ↑","TCO ↓"]
+    } %}
+    {% include "partials/card-service.njk", {
+      title: "Prototipos en 4 semanas",
+      desc: "Probar antes de invertir. Entregamos piloto medido en KPIs.",
+      deliverables: ["Roadmap","PoC funcional","Informe de resultados"],
+      kpis: ["TTV ↓","Riesgo ↓","Aprendizajes ↑"]
+    } %}
+    {% include "partials/card-service.njk", {
+      title: "Consultoría y capacitación",
+      desc: "Estrategia, arquitectura y buenas prácticas para tu equipo.",
+      deliverables: ["Diagnóstico","Guías","Talleres"],
+      kpis: ["Velocidad ↑","Calidad ↑","Costos ↓"]
+    } %}
+  </div>
+</section>
+
+<section class="section">
+  <h2>Planes</h2>
+  <div class="table-scroll">
+    <table class="plans">
+      <caption>Comparativa de planes</caption>
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>Incluye</th>
+          <th>Duración</th>
+          <th>KPIs</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Starter</td>
+          <td>Diagnóstico + PoC</td>
+          <td>4 semanas</td>
+          <td>Hipótesis y KPIs</td>
+        </tr>
+        <tr>
+          <td>Growth</td>
+          <td>Piloto + Evaluación</td>
+          <td>8–12 semanas</td>
+          <td>AHT/CSAT/Costo</td>
+        </tr>
+        <tr>
+          <td>Scale</td>
+          <td>Producción + Observabilidad</td>
+          <td>3–6 meses</td>
+          <td>ROI y SLOs</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

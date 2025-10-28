@@ -1,0 +1,4 @@
+{
+  "nav": { "home": "Inicio", "services": "Servicios", "about": "Nosotros", "contact": "Contacto", "privacy": "Privacidad", "terms": "Términos" },
+  "home": { "hero": { "title": "Software, moda y agricultura con calidad global.", "subtitle": "Desarrollamos software, diseñamos y comercializamos prendas, y cultivamos con enfoque sostenible." } }
+}

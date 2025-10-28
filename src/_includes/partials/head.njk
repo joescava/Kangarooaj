@@ -1,0 +1,89 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }} | {{ site.title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="canonical" href="{{ canonical | default(site.url + page.url) }}">
+<meta name="theme-color" content="#0b0f1a">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ canonical | default(site.url + page.url) }}">
+<meta property="og:image" content="{{ site.url }}/assets/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ site.url }}/assets/images/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Kangarooo AJ SAS",
+    "url": "{{ site.url }}",
+    "email": "{{ brand.email }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "{{ brand.cityCountry }}"
+    },
+    "sameAs": ["{{ site.social.linkedin }}", "{{ site.social.x }}"]
+  }
+</script>
+{% if page.url == '/' %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Kangarooo AJ SAS",
+      "url": "{{ site.url }}",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ site.url }}/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Usan mis datos para entrenar modelos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Aislamos datos y no los enviamos a entrenamientos externos."
+          }
+        }, {
+          "@type": "Question",
+          "name": "¿Qué KPIs miden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AHT, CSAT, costo por ticket, tiempo de ciclo, precisión y cobertura."
+          }
+        }
+      ]
+    }
+  </script>
+{% endif %}
+{% if page.url startsWith '/services/' %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Servicios de IA aplicada",
+      "provider": {
+        "@type": "Organization",
+        "name": "Kangarooo AJ SAS"
+      },
+      "areaServed": "LatAm y global",
+      "serviceType": "Consultoría e implementación de IA"
+    }
+  </script>
+{% endif %}

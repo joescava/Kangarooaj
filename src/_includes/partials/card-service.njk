@@ -1,0 +1,16 @@
+<article class="card service">
+  <h3>{{ title }}</h3>
+  <p>{{ desc }}</p>
+  <h4>Entregables</h4>
+  <ul>
+    {% for d in deliverables %}
+      <li>{{ d }}</li>
+    {% endfor %}
+  </ul>
+  <h4>KPIs</h4>
+  <ul class="kpis">
+    {% for k in kpis %}
+      <li>{{ k }}</li>
+    {% endfor %}
+  </ul>
+</article>

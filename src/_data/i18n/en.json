@@ -1,0 +1,4 @@
+{
+  "nav": { "home": "Home", "services": "Services", "about": "About", "contact": "Contact", "privacy": "Privacy", "terms": "Terms" },
+  "home": { "hero": { "title": "Software, apparel, and agriculture with global quality.", "subtitle": "We build software, design and market apparel, and run agricultural activities with a sustainable approach." } }
+}
