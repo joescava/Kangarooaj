@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="64" viewBox="0 0 320 64" role="img" aria-labelledby="logoTitle logoDesc">
-  <title id="logoTitle">KANGAROO AJ</title>
-  <desc id="logoDesc">Logotipo tipográfico de Kangaroo AJ S.A.S. en mayúsculas. Variante compacta K-AJ para espacios reducidos.</desc>
-  <rect width="320" height="64" rx="8" fill="#FFFFFF"/>
-  <text x="16" y="42" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif"
-        font-size="28" font-weight="700" letter-spacing="1.2" fill="#101828">KANGAROO AJ</text>
-</svg>
