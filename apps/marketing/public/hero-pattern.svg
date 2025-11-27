@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-labelledby="title desc">
+  <title id="title">Patrón abstracto</title>
+  <desc id="desc">Fondo abstracto suave para secciones hero.</desc>
+  <defs>
+    <radialGradient id="rg1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(120 40) rotate(45) scale(260 220)">
+      <stop stop-color="#6366f1" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="rg2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(640 360) rotate(-45) scale(260 220)">
+      <stop stop-color="#22c55e" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="400" fill="#020617"/>
+  <circle cx="160" cy="80" r="260" fill="url(#rg1)"/>
+  <circle cx="620" cy="340" r="260" fill="url(#rg2)"/>
+  <g stroke="#1f2937" stroke-width="0.5" opacity="0.6">
+    <path d="M40 40h720M40 80h720M40 120h720M40 160h720M40 200h720M40 240h720M40 280h720M40 320h720M40 360h720"/>
+    <path d="M80 20v360M160 20v360M240 20v360M320 20v360M400 20v360M480 20v360M560 20v360M640 20v360M720 20v360"/>
+  </g>
+</svg>
