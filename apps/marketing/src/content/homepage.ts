@@ -1,24 +1,24 @@
 export const homepageContent = {
   hero: {
-    eyebrow: "Consultoría, tecnología y futuro",
-    title: "Soluciones que conectan software, moda y campo en una sola visión.",
+    eyebrow: "Consultoría tecnológica y arquitectura",
+    title: "Soluciones de software e IA que tu empresa realmente puede operar.",
     subtitle:
-      "Kangaroo AJ S.A.S. acompaña a empresas que quieren aprovechar la tecnología para innovar en sus operaciones, su marca y su cadena de valor.",
+      "Ayudamos a pequeñas y medianas empresas a ordenar sus procesos, definir una arquitectura clara y aprovechar la nube y la IA sin hacer la operación más compleja.",
     primaryCta: {
       label: "Agenda una sesión estratégica",
-      href: "#contacto"
+      href: "#contacto",
     },
     secondaryCta: {
       label: "Ver servicios",
-      href: "/servicios"
+      href: "/servicios",
     },
     bullets: [
-      "Arquitectura y desarrollo de software a medida.",
-      "Diseño y comercialización de moda con enfoque digital.",
-      "Iniciativas y proyectos agrícolas con visión sostenible."
-    ]
+      "Diagnóstico tecnológico y roadmap centrado en tus procesos actuales.",
+      "Desarrollo a medida y automatización para reducir trabajo manual y errores.",
+      "Casos de uso de IA aterrizados: asistentes, copilots internos y análisis de información.",
+    ],
   },
   trust: {
-    label: "Desde Bogotá para el mundo, con mentalidad global y ejecución pragmática."
-  }
+    label: "Experiencia con equipos en USA y Colombia, con foco en claridad técnica y resultados.",
+  },
 };

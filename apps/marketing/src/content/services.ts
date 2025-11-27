@@ -2,42 +2,55 @@ import type { Service } from "@/types/content";
 
 export const services: Service[] = [
   {
-    id: "software-consulting",
-    name: "Consultoría y desarrollo de software",
-    tagline: "Del boceto a producción con arquitectura sólida.",
+    id: "tech-consulting",
+    name: "Consultoría tecnológica y arquitectura de soluciones",
+    tagline: "Del diagnóstico al roadmap, con decisiones claras y aterrizadas.",
     description:
-      "Diseñamos y construimos soluciones de software alineadas al negocio: desde prototipos hasta plataformas robustas listas para escalar.",
-    category: "software",
+      "Revisamos tus procesos, sistemas actuales y dolores del día a día para definir una arquitectura tecnológica simple, escalable y realista para tu empresa.",
+    category: "consulting",
     highlights: [
-      "Arquitectura de soluciones y acompañamiento CTO-as-a-service.",
+      "Diagnóstico de aplicaciones, integraciones y puntos de dolor.",
+      "Diseño de arquitectura de software y datos orientada al negocio.",
+      "Acompañamiento en decisiones de nube, proveedores y stack tecnológico.",
+    ],
+  },
+  {
+    id: "custom-software",
+    name: "Desarrollo de software a la medida",
+    tagline: "Aplicaciones y APIs que responden a tu operación, no al revés.",
+    description:
+      "Construimos soluciones de software centradas en tus procesos: desde pequeños módulos internos hasta plataformas que se conectan con tus sistemas actuales.",
+    category: "delivery",
+    highlights: [
       "Desarrollo backend y frontend con buenas prácticas modernas.",
-      "Integración con servicios en la nube y plataformas existentes."
-    ]
+      "Diseño de APIs limpias y mantenibles para integrarse con otros sistemas.",
+      "Enfoque en código legible, probado y listo para evolucionar.",
+    ],
   },
   {
-    id: "fashion-business",
-    name: "Moda y diseño con enfoque digital",
-    tagline: "Marca, producto y experiencia pensados end-to-end.",
+    id: "automation",
+    name: "Automatización de procesos e integración",
+    tagline: "Menos tareas manuales, más foco en el negocio.",
     description:
-      "Acompañamos marcas de moda en la definición de su propuesta, colecciones, canales digitales y operaciones para crecer con estructura.",
-    category: "fashion",
+      "Identificamos tareas repetitivas y flujos críticos para automatizarlos con software, integraciones y orquestación de servicios en la nube.",
+    category: "automation",
     highlights: [
-      "Diseño y definición de colección alineada a la identidad de marca.",
-      "Soporte en ecommerce, catálogo digital y activos visuales.",
-      "Optimización de procesos entre diseño, producción y venta."
-    ]
+      "Mapeo de procesos y definición de flujos de punta a punta.",
+      "Automatización de flujos entre herramientas (ERP, CRM, contabilidad, etc.).",
+      "Uso de buenas prácticas ágiles (Scrum, Kanban) para implementar por iteraciones.",
+    ],
   },
   {
-    id: "agro-projects",
-    name: "Proyectos e iniciativas agrícolas",
-    tagline: "Tecnología y visión de negocio en el campo.",
+    id: "ai-applied",
+    name: "IA aplicada y asistentes para el negocio",
+    tagline: "Casos de uso concretos, sin humo ni promesas vacías.",
     description:
-      "Exploramos y estructuramos proyectos agrícolas con foco en sostenibilidad, trazabilidad y rentabilidad a largo plazo.",
-    category: "agro",
+      "Exploramos dónde la IA realmente aporta valor en tu operación: desde asistentes internos hasta análisis de información y generación de contenido guiada.",
+    category: "ai",
     highlights: [
-      "Estructuración de proyectos con mirada financiera y operativa.",
-      "Uso inteligente de datos para planificación y seguimiento.",
-      "Conexión entre campo, industria y canales comerciales."
-    ]
-  }
+      "Taller de descubrimiento para identificar oportunidades reales de IA.",
+      "Diseño de asistentes internos (copilots) conectados a tu información.",
+      "Pruebas controladas antes de escalar la solución al resto de la empresa.",
+    ],
+  },
 ];
