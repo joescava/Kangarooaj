@@ -22,15 +22,11 @@ export function HeroHome() {
           </div>
 
           <div className="space-y-4">
-            <p className="text-sm font-medium uppercase tracking-[0.16em] text-slate-300">
-              {hero.eyebrow}
-            </p>
+            <p className="text-sm font-medium uppercase tracking-[0.16em] text-slate-300">{hero.eyebrow}</p>
             <h1 className="text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl lg:text-5xl">
               {hero.title}
             </h1>
-            <p className="max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">
-              {hero.subtitle}
-            </p>
+            <p className="max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">{hero.subtitle}</p>
           </div>
 
           <div className="flex flex-wrap items-center gap-4">
@@ -63,27 +59,27 @@ export function HeroHome() {
             </div>
             <div className="grid grid-cols-2 gap-3 text-[11px] sm:text-xs">
               <div className="rounded-2xl bg-slate-900/80 p-3 ring-1 ring-slate-800">
-                <p className="mb-1 text-[11px] font-semibold text-slate-100">Tecnología y software</p>
+                <p className="mb-1 text-[11px] font-semibold text-slate-100">Consultoría y arquitectura</p>
                 <p className="text-[11px] text-slate-400">
-                  Arquitectura, desarrollo y automatización con foco en negocio.
+                  Diagnóstico y diseño de una arquitectura clara y sostenible para tu operación.
                 </p>
               </div>
               <div className="rounded-2xl bg-slate-900/80 p-3 ring-1 ring-slate-800">
-                <p className="mb-1 text-[11px] font-semibold text-slate-100">Moda y marca</p>
+                <p className="mb-1 text-[11px] font-semibold text-slate-100">Desarrollo a medida</p>
                 <p className="text-[11px] text-slate-400">
-                  Estrategia de colección, identidad y experiencia digital.
+                  Aplicaciones, APIs y módulos internos alineados con tus procesos reales.
                 </p>
               </div>
               <div className="rounded-2xl bg-slate-900/80 p-3 ring-1 ring-slate-800">
-                <p className="mb-1 text-[11px] font-semibold text-slate-100">Campo y producción</p>
+                <p className="mb-1 text-[11px] font-semibold text-slate-100">Automatización y datos</p>
                 <p className="text-[11px] text-slate-400">
-                  Proyectos agrícolas conectados con datos y trazabilidad.
+                  Integraciones y automatización para reducir trabajo manual y errores.
                 </p>
               </div>
               <div className="rounded-2xl bg-slate-900/80 p-3 ring-1 ring-slate-800">
-                <p className="mb-1 text-[11px] font-semibold text-slate-100">Estrategia y ejecución</p>
+                <p className="mb-1 text-[11px] font-semibold text-slate-100">IA aplicada al negocio</p>
                 <p className="text-[11px] text-slate-400">
-                  Acompañamiento end-to-end: de la idea a los resultados.
+                  Asistentes internos y casos de uso de IA con impacto medible.
                 </p>
               </div>
             </div>
