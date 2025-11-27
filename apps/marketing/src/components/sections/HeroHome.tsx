@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { homepageContent } from "@/content/homepage";
 import { Container } from "@/components/ui/Container";
+import { NanoField } from "@/components/visuals/NanoField";
 
+// OJO: export nombrado
 export function HeroHome() {
   const { hero, trust } = homepageContent;
 
@@ -11,9 +13,11 @@ export function HeroHome() {
     "inline-flex items-center justify-center rounded-full bg-transparent hover:bg-slate-800/60 text-slate-100 text-[13px] sm:text-sm px-4 py-2 font-medium border border-slate-700 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 focus-visible:ring-brand-500";
 
   return (
-    <section className="relative overflow-hidden pb-20 pt-16 sm:pt-20 lg:pt-24">
-      <div className="pointer-events-none absolute inset-0 gradient-bg opacity-70" />
+    <section className="relative overflow-hidden bg-slate-950 pb-20 pt-16 sm:pt-20 lg:pt-24">
+      {/* Fondo tipo nanobots/IA */}
+      <NanoField />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-slate-950 via-slate-950/40 to-transparent" />
+
       <Container className="relative z-10 flex flex-col gap-12 lg:flex-row lg:items-center">
         <div className="flex-1 space-y-8">
           <div className="inline-flex items-center gap-2 rounded-full bg-slate-900/80 px-3 py-1 text-xs text-slate-200 ring-1 ring-slate-700/80">
@@ -49,7 +53,7 @@ export function HeroHome() {
         </div>
 
         <div className="flex-1">
-          <div className="relative mx-auto max-w-md rounded-3xl border border-slate-800 bg-slate-950/60 p-6 shadow-2xl shadow-black/50 backdrop-blur">
+          <div className="relative mx-auto max-w-md rounded-3xl border border-slate-800 bg-slate-950/70 p-6 shadow-2xl shadow-black/50 backdrop-blur">
             <div className="mb-6 flex items-center justify-between text-xs text-slate-400">
               <span>Mapa de capacidades</span>
               <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2 py-1 text-[10px] text-emerald-300 ring-1 ring-emerald-500/40">

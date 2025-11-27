@@ -19,7 +19,7 @@ function getCategoryLabel(category: string): string {
 
 export function ServicesGrid() {
   return (
-    <section className="border-t border-slate-900/80 bg-slate-950/90 py-16 sm:py-20">
+    <section className="section-shell border-t border-slate-900/80 py-16 sm:py-20">
       <Container>
         <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>

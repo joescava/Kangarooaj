@@ -4,7 +4,7 @@ import { talentProfiles } from "@/content/talentProfiles";
 
 export function TalentProfilesSection() {
   return (
-    <section className="border-t border-slate-900/80 bg-slate-950 py-16 sm:py-20">
+    <section className="section-shell-alt border-t border-slate-900/80 py-16 sm:py-20">
       <Container>
         <div className="mb-10 max-w-3xl space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-300">Perfiles tecnológicos</p>

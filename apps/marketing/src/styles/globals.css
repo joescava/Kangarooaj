@@ -16,3 +16,93 @@ body {
     radial-gradient(circle at top right, rgba(56, 189, 248, 0.4), transparent 55%),
     radial-gradient(circle at bottom, rgba(16, 185, 129, 0.35), transparent 55%);
 }
+
+.section-shell {
+  position: relative;
+  background-color: #020617; /* slate-950 */
+  overflow: hidden;
+}
+
+.section-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.14), transparent 55%);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.section-shell::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background-image:
+    linear-gradient(to right, rgba(148, 163, 184, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.18) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.18;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.section-shell-alt {
+  position: relative;
+  background-color: #020617;
+  overflow: hidden;
+}
+
+.section-shell-alt::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.16), transparent 55%),
+    radial-gradient(circle at bottom left, rgba(45, 212, 191, 0.16), transparent 55%);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.section-shell-alt::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background-image:
+    linear-gradient(to right, rgba(30, 64, 175, 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 64, 175, 0.3) 1px, transparent 1px);
+  background-size: 96px 96px;
+  opacity: 0.16;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+/* Variante más suave para páginas de texto (nosotros, servicios, etc.) */
+
+.section-shell-page {
+  position: relative;
+  background-color: #020617;
+  overflow: hidden;
+}
+
+.section-shell-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top center, rgba(56, 189, 248, 0.12), transparent 60%);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.section-shell-page::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background-image:
+    linear-gradient(to right, rgba(148, 163, 184, 0.16) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.12) 1px, transparent 1px);
+  background-size: 90px 90px;
+  opacity: 0.12;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}

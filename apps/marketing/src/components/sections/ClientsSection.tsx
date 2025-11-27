@@ -4,7 +4,7 @@ import { clients } from "@/content/clients";
 
 export function ClientsSection() {
   return (
-    <section className="border-t border-slate-900/80 bg-slate-950/95 py-16 sm:py-20">
+    <section className="section-shell border-t border-slate-900/80 py-16 sm:py-20">
       <Container>
         <div className="mb-8 max-w-3xl space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-300">Confían en nosotros</p>
