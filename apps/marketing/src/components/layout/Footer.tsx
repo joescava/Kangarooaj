@@ -18,24 +18,17 @@ export function Footer() {
 
         <div className="grid flex-1 gap-6 text-sm text-slate-300 sm:grid-cols-2 md:grid-cols-3">
           <div>
-            <h3 className="mb-3 text-xs font-semibold uppercase tracking-wide text-slate-400">
-              Empresa
-            </h3>
+            <h3 className="mb-3 text-xs font-semibold uppercase tracking-wide text-slate-400">Empresa</h3>
             <ul className="space-y-1.5">
               <li>{siteConfig.company.legalName}</li>
               <li>{siteConfig.company.location}</li>
             </ul>
           </div>
           <div>
-            <h3 className="mb-3 text-xs font-semibold uppercase tracking-wide text-slate-400">
-              Contacto
-            </h3>
+            <h3 className="mb-3 text-xs font-semibold uppercase tracking-wide text-slate-400">Contacto</h3>
             <ul className="space-y-1.5">
               <li>
-                <a
-                  href={`mailto:${siteConfig.company.email}`}
-                  className="hover:text-white"
-                >
+                <a href={`mailto:${siteConfig.company.email}`} className="hover:text-white">
                   {siteConfig.company.email}
                 </a>
               </li>
@@ -43,9 +36,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="mb-3 text-xs font-semibold uppercase tracking-wide text-slate-400">
-              Legal
-            </h3>
+            <h3 className="mb-3 text-xs font-semibold uppercase tracking-wide text-slate-400">Legal</h3>
             <ul className="space-y-1.5">
               <li>
                 <a href="/privacidad" className="hover:text-white">
@@ -66,9 +57,7 @@ export function Footer() {
           <span>
             © {currentYear} {siteConfig.name}. Todos los derechos reservados.
           </span>
-          <span>
-            Arquitectura, tecnología y negocio, conectados para crear valor real.
-          </span>
+          <span>Arquitectura, tecnología y negocio, conectados para crear valor real.</span>
         </Container>
       </div>
     </footer>

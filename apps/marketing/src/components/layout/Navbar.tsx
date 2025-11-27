@@ -24,17 +24,12 @@ export function Navbar() {
 
         <nav className="hidden items-center gap-6 text-sm text-slate-200 md:flex">
           {siteConfig.navItems.map((item) => {
-            const active = item.href === "/"
-              ? pathname === "/"
-              : pathname?.startsWith(item.href);
+            const active = item.href === "/" ? pathname === "/" : pathname?.startsWith(item.href);
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={clsx(
-                  "transition hover:text-white",
-                  active && "text-brand-300"
-                )}
+                className={clsx("transition hover:text-white", active && "text-brand-300")}
               >
                 {item.label}
               </Link>

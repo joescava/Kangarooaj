@@ -15,7 +15,7 @@ function buildMailtoUrl(form: HTMLFormElement): string {
 
   const subject = encodeURIComponent("Contacto Kangaroo AJ");
   const body = encodeURIComponent(
-    `Nombre: ${name}\nEmpresa: ${company}\nInterés principal: ${topic}\n\nDetalle:\n${message}`,
+    `Nombre: ${name}\nEmpresa: ${company}\nInterés principal: ${topic}\n\nDetalle:\n${message}`
   );
 
   return `mailto:${email}?subject=${subject}&body=${body}`;
@@ -38,21 +38,17 @@ export function ContactFormSection() {
     >
       <Container className="grid gap-10 md:grid-cols-[1.1fr,0.9fr] md:items-start">
         <div className="space-y-5">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-300">
-            Hablemos
-          </p>
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-300">Hablemos</p>
           <h2 className="text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">
             Alineemos tecnología, negocio y ejecución en una misma conversación.
           </h2>
           <p className="text-sm text-slate-300">
-            Cuéntanos en qué punto está tu empresa y qué quieres lograr. A partir de ahí, diseñamos un
-            camino realista, con prioridades claras y un plan accionable.
+            Cuéntanos en qué punto está tu empresa y qué quieres lograr. A partir de ahí, diseñamos un camino realista,
+            con prioridades claras y un plan accionable.
           </p>
           <div className="space-y-2 text-sm text-slate-200">
             <div>
-              <span className="block text-xs font-semibold uppercase tracking-wide text-slate-400">
-                Correo
-              </span>
+              <span className="block text-xs font-semibold uppercase tracking-wide text-slate-400">Correo</span>
               <a
                 href={`mailto:${email}?subject=Contacto%20Kangaroo%20AJ`}
                 className="text-sm text-emerald-300 hover:text-emerald-200"
@@ -61,20 +57,16 @@ export function ContactFormSection() {
               </a>
             </div>
             <div>
-              <span className="block text-xs font-semibold uppercase tracking-wide text-slate-400">
-                Teléfono
-              </span>
+              <span className="block text-xs font-semibold uppercase tracking-wide text-slate-400">Teléfono</span>
               <span>{phone}</span>
             </div>
           </div>
         </div>
         <div className="rounded-3xl border border-slate-800 bg-slate-950/80 p-6 shadow-xl shadow-black/50">
-          <p className="mb-4 text-sm font-medium text-slate-100">
-            Comparte el contexto de tu proyecto.
-          </p>
+          <p className="mb-4 text-sm font-medium text-slate-100">Comparte el contexto de tu proyecto.</p>
           <p className="mb-6 text-xs text-slate-400">
-            Este formulario prepara la conversación. El envío abre tu cliente de correo para que tengas
-            una copia completa de lo que compartes.
+            Este formulario prepara la conversación. El envío abre tu cliente de correo para que tengas una copia
+            completa de lo que compartes.
           </p>
           <form onSubmit={handleSubmit} className="space-y-4 text-sm">
             <div className="space-y-1">
