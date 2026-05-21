@@ -1,2 +1,18 @@
-// TanStack Start owns the runtime entrypoint. This file exists only to document the client entry boundary.
-export {};
+import { StrictMode } from "react";
+import ReactDOM from "react-dom/client";
+import { RouterProvider } from "@tanstack/react-router";
+
+import { router } from "./router";
+import "./styles.css";
+
+const rootElement = document.getElementById("root");
+
+if (!rootElement) {
+  throw new Error("Root element not found");
+}
+
+ReactDOM.createRoot(rootElement).render(
+  <StrictMode>
+    <RouterProvider router={router} />
+  </StrictMode>,
+);

@@ -1,12 +1,18 @@
-// Central Vite/TanStack configuration for GitHub Pages deployment.
-// The Lovable preset owns the React, TanStack Start, Tailwind, path alias and Vite plugins.
-import { defineConfig } from "@lovable.dev/vite-tanstack-config";
+import { tanstackRouter } from "@tanstack/router-plugin/vite";
+import tailwindcss from "@tailwindcss/vite";
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
+import tsConfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  tanstackStart: {
-    server: { entry: "server" },
-  },
-  vite: {
-    base: "/Kangarooaj/",
-  },
+  base: "/",
+  plugins: [
+    tsConfigPaths(),
+    tanstackRouter({
+      target: "react",
+      autoCodeSplitting: true,
+    }),
+    tailwindcss(),
+    react(),
+  ],
 });

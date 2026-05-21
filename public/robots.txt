@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://johancantev.github.io/kangaroo-aj-website/sitemap.xml
+Sitemap: https://kangarooaj.com/sitemap.xml
