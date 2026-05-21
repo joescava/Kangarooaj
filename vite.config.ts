@@ -7,6 +7,6 @@ export default defineConfig({
     server: { entry: "server" },
   },
   vite: {
-    base: "/kangaroo-aj-website/",
+    base: "/Kangarooaj/",
   },
 });
