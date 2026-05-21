@@ -1,0 +1,78 @@
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    min-width: 0;
+    border-color: var(--border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+    background: var(--background);
+    color-scheme: dark;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    overflow-x: clip;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "ss01", "cv11", "kern";
+  }
+
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    max-width: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  img,
+  picture,
+  svg,
+  video,
+  canvas {
+    max-width: 100%;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a,
+  button,
+  label,
+  span,
+  li {
+    overflow-wrap: anywhere;
+  }
+
+  select,
+  input,
+  textarea,
+  button {
+    font: inherit;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent-cyan);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--accent-cyan);
+    color: #020617;
+  }
+}

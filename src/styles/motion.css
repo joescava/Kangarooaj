@@ -1,0 +1,69 @@
+@keyframes premium-atmosphere {
+  0% {
+    transform: translate3d(-2%, -1%, 0) scale(1);
+    opacity: 0.62;
+  }
+  50% {
+    transform: translate3d(1%, 2%, 0) scale(1.06);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate3d(3%, -1%, 0) scale(1.1);
+    opacity: 0.68;
+  }
+}
+@keyframes smoke-drift {
+  0% {
+    transform: translate3d(-2%, -1%, 0) scale(1);
+    opacity: 0.56;
+  }
+  50% {
+    transform: translate3d(2%, 1%, 0) scale(1.05);
+    opacity: 0.76;
+  }
+  100% {
+    transform: translate3d(4%, -2%, 0) scale(1.1);
+    opacity: 0.62;
+  }
+}
+@keyframes slow-zoom {
+  0% {
+    transform: scale(1.02) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.07) translate3d(-1.2%, 0.8%, 0);
+  }
+}
+@keyframes float-soft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+  .ambient-bg::before,
+  .ambient-bg::after,
+  .smoke-layer,
+  .animate-slow-zoom,
+  .animate-float-soft {
+    animation: none !important;
+  }
+  .reveal-motion {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
