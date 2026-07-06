@@ -8,7 +8,7 @@ type Props = {
 
 export function Logo({ compact = false, tone = "light" }: Props) {
   const markSize = compact
-    ? "h-9 w-9 sm:h-10 sm:w-10"
+    ? "h-8 w-8 sm:h-9 sm:w-9"
     : "h-10 w-10 sm:h-12 sm:w-12";
 
   return (
@@ -28,19 +28,14 @@ export function Logo({ compact = false, tone = "light" }: Props) {
       <div className="min-w-0 leading-none">
         <div
           className={cn(
-            "text-[12px] font-bold sm:text-[15px]",
+            "text-[11px] font-bold sm:text-[14px]",
             tone === "dark" ? "text-white" : "text-slate-950",
           )}
         >
           KANGAROO
         </div>
 
-        <div
-          className={cn(
-            "mt-0.5 text-[9px] uppercase sm:mt-1 sm:text-[11px]",
-            tone === "dark" ? "text-gold" : "text-gold",
-          )}
-        >
+        <div className="mt-0.5 text-[8px] uppercase text-gold sm:text-[10px]">
           AJ SAS
         </div>
       </div>

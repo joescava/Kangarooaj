@@ -1,5 +1,3 @@
-export const SITE_NAME = "Kangaroo AJ S.A.S.";
-
 export const SITE_URL = "https://kangarooaj.com/";
 
 export const SITE_TITLE =
