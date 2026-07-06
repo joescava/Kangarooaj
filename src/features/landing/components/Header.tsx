@@ -217,7 +217,7 @@ export function Header({ language, region, onLanguageChange }: Props) {
   return (
     <>
       <header className="sticky inset-x-0 top-0 z-50 w-full max-w-[100vw] overflow-visible border-b border-slate-200/80 bg-white/86 shadow-[0_18px_50px_-38px_rgba(15,23,42,.35)] backdrop-blur-2xl transition-all duration-300">
-        <div className="fluid-container flex min-h-16 items-center justify-between gap-2 sm:min-h-18 sm:gap-3">
+        <div className="fluid-container flex min-h-14 items-center justify-between gap-2 py-1 sm:min-h-16 sm:gap-3 lg:min-h-16">
           <a
             href="#inicio"
             aria-label="Kangaroo AJ home"
@@ -260,7 +260,7 @@ export function Header({ language, region, onLanguageChange }: Props) {
             <a
               href="#contacto"
               onClick={() => handleNav("header_primary")}
-              className="hidden max-w-[11rem] items-center justify-center gap-1.5 rounded-full bg-gold px-3 py-2 text-center text-[11px] font-bold leading-4 text-slate-950 transition hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0 sm:inline-flex 2xl:max-w-[14rem] 2xl:px-4 2xl:text-sm"
+              className="hidden max-w-[11rem] items-center justify-center gap-1.5 rounded-full bg-gold px-3 py-1.5 text-center text-[11px] font-bold leading-4 text-slate-950 transition hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0 sm:inline-flex 2xl:max-w-[14rem] 2xl:px-4 2xl:text-sm"
             >
               <span className="truncate whitespace-nowrap">{t.ctaMain}</span>
               <ArrowRight className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
