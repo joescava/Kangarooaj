@@ -42,6 +42,26 @@
     transform: translate3d(0, -10px, 0);
   }
 }
+@keyframes hero-image-fade {
+  0%,
+  42% {
+    opacity: 0.96;
+  }
+  100% {
+    opacity: 0.22;
+  }
+}
+@supports (animation-timeline: view()) {
+  .hero-full-image {
+    animation:
+      slow-zoom 18s ease-in-out infinite alternate,
+      hero-image-fade linear both;
+    animation-timeline: auto, view();
+    animation-range:
+      normal,
+      contain 0% exit 90%;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -58,7 +78,8 @@
   .ambient-bg::after,
   .smoke-layer,
   .animate-slow-zoom,
-  .animate-float-soft {
+  .animate-float-soft,
+  .hero-full-image {
     animation: none !important;
   }
   .reveal-motion {

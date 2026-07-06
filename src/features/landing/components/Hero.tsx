@@ -6,12 +6,12 @@ import {
   ShieldCheck,
   Workflow,
 } from "lucide-react";
-import heroImg from "@/assets/hero-enterprise-tech.webp";
-import { trackEvent } from "@/lib/analytics";
+import heroImg from "@/assets/kangaroo-hero-principal.webp";
 import { Picture } from "@/components/Picture";
 import { copy } from "@/features/i18n/constants/copy";
 import type { Language } from "@/features/i18n/types/language.types";
 import type { Region } from "@/features/region/types/region.types";
+import { trackEvent } from "@/lib/analytics";
 import { Reveal } from "./Reveal";
 
 type HeroProps = { language: Language; region: Region };
@@ -23,67 +23,61 @@ export function Hero({ language, region }: HeroProps) {
   const executionSignals = [
     {
       icon: ShieldCheck,
-      label: isEnglish
-        ? "Architecture with experienced judgment"
-        : "Arquitectura con criterio experto",
+      label: isEnglish ? "Architecture" : "Arquitectura",
       text: isEnglish
-        ? "Clear technical decisions across architecture, delivery and review."
-        : "Decisiones técnicas claras en arquitectura, entrega y revisión.",
+        ? "Technical decisions before implementation noise."
+        : "Decisiones técnicas antes del ruido de implementación.",
     },
     {
       icon: Workflow,
-      label: isEnglish ? "Workflow automation" : "Automatización de flujos",
+      label: isEnglish ? "Automation" : "Automatización",
       text: isEnglish
-        ? "Process improvements connected to APIs, data and real business rules."
-        : "Mejoras de procesos conectadas a APIs, datos y reglas reales del negocio.",
+        ? "Processes connected to APIs, data and real rules."
+        : "Procesos conectados a APIs, datos y reglas reales.",
     },
     {
       icon: BrainCircuit,
-      label: isEnglish
-        ? "Practical AI, not AI theater"
-        : "IA práctica, no discurso vacío",
+      label: isEnglish ? "Applied AI" : "IA aplicada",
       text: isEnglish
-        ? "Assistants, agents and copilots grounded in measurable business use cases."
-        : "Asistentes, agentes y copilotos aterrizados en casos de uso medibles.",
+        ? "Assistants and copilots tied to measurable workflows."
+        : "Asistentes y copilotos ligados a flujos medibles.",
     },
   ];
 
   return (
     <section
       id="inicio"
-      className="relative min-h-[92svh] overflow-hidden bg-[#050506] pt-36 pb-20 md:pt-36 md:pb-28"
+      className="relative isolate min-h-[calc(100svh-5rem)] overflow-hidden bg-slate-950 pt-16 pb-20 md:pt-24 md:pb-28"
     >
       <div className="absolute inset-0 z-0">
         <Picture
           src={heroImg}
-          alt="Technology team reviewing enterprise software dashboards and business automation workflows"
-          className="h-full w-full scale-[1.03] object-cover opacity-50 motion-safe:animate-slow-zoom"
+          alt="Realistic kangaroo in cinematic Australian outback light with subtle technology data overlays"
+          className="hero-full-image h-full w-full scale-[1.02] object-cover motion-safe:animate-slow-zoom"
           loading="eager"
           fetchPriority="high"
-          width={2560}
-          height={1440}
-          style={{ objectPosition: "68% center" }}
+          width={1536}
+          height={1024}
+          style={{ objectPosition: "62% center" }}
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,#050506_0%,rgba(5,5,6,.96)_35%,rgba(5,5,6,.72)_68%,rgba(5,5,6,.9)_100%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,5,6,.9)_0%,rgba(5,5,6,.42)_46%,#050506_100%)]" />
       </div>
+      <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(255,255,255,.96)_0%,rgba(255,255,255,.9)_30%,rgba(248,250,252,.56)_58%,rgba(248,250,252,.18)_100%)]" />
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_10%_20%,rgba(0,194,168,.12),transparent_28%),radial-gradient(circle_at_88%_8%,rgba(217,119,6,.14),transparent_30%)]" />
+      <div className="noise-texture absolute inset-0 z-0 opacity-35" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-64 bg-gradient-to-b from-transparent via-[#f8fafc]/78 to-[#f8fafc]" />
 
-      <div className="smoke-layer z-[1] opacity-50" />
-      <div className="cinematic-overlay absolute inset-0 z-[1]" />
-      <div className="noise-texture absolute inset-0 z-[1] opacity-45" />
-
-      <div className="relative z-10 mx-auto grid max-w-7xl gap-12 px-5 md:px-8 lg:grid-cols-[1.08fr_.92fr] lg:items-center">
-        <Reveal>
-          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-white/[0.045] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-slate-300 backdrop-blur-xl">
+      <div className="relative z-10 mx-auto flex min-h-[calc(100svh-12rem)] w-full max-w-7xl flex-col justify-center gap-10 px-5 md:px-8">
+        <Reveal className="min-w-0 max-w-3xl">
+          <div className="inline-flex max-w-full items-center gap-2 rounded-2xl border border-teal-200 bg-white/82 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-slate-700 shadow-sm backdrop-blur-xl sm:rounded-full sm:tracking-[0.22em]">
             <Network className="h-3.5 w-3.5 text-gold" aria-hidden="true" />
             {t.heroBadge}
           </div>
 
-          <h1 className="localized-copy mt-7 max-w-5xl font-display text-[clamp(2.35rem,11vw,6rem)] font-black leading-[1.03] tracking-[-0.055em] text-white sm:text-[clamp(2.75rem,6.5vw,6rem)]">
-            <span className="gradient-tech-text">{t.heroTitle}</span>
+          <h1 className="localized-copy mt-7 w-full max-w-[20rem] font-display text-[2rem] font-black leading-[1.04] tracking-[-0.035em] text-slate-950 sm:max-w-5xl sm:text-[clamp(3rem,6.2vw,5.7rem)] sm:leading-[1.02] sm:tracking-[-0.045em]">
+            {t.heroTitle}
           </h1>
 
-          <p className="localized-copy mt-7 max-w-2xl text-[clamp(1.0625rem,2vw,1.35rem)] leading-8 text-slate-300">
+          <p className="localized-copy mt-7 w-full max-w-[calc(100vw-2.5rem)] text-[clamp(1.0625rem,2vw,1.32rem)] leading-8 text-slate-600 sm:max-w-2xl">
             {t.heroSubtitle}
           </p>
 
@@ -97,7 +91,7 @@ export function Hero({ language, region }: HeroProps) {
                   region,
                 })
               }
-              className="tap-target localized-copy inline-flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-bold text-slate-950 transition hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0 accent-glow"
+              className="tap-target localized-copy inline-flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-bold text-slate-950 shadow-[0_22px_50px_-30px_rgba(0,224,184,.72)] transition hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0"
             >
               {t.ctaMain} <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </a>
@@ -111,7 +105,7 @@ export function Hero({ language, region }: HeroProps) {
                   region,
                 })
               }
-              className="tap-target localized-copy inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.045] px-6 py-3 text-sm font-semibold text-white backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-cyan-300/45 hover:bg-white/[0.07] active:translate-y-0"
+              className="tap-target localized-copy inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-800 shadow-sm transition hover:-translate-y-0.5 hover:border-cyan-300/60 hover:text-slate-950 active:translate-y-0"
             >
               {t.ctaSecondary}
             </a>
@@ -124,7 +118,7 @@ export function Hero({ language, region }: HeroProps) {
             {(t.benefits as string[]).map((benefit) => (
               <span
                 key={benefit}
-                className="localized-copy tap-target inline-flex min-w-0 items-center gap-2 rounded-full border border-white/10 bg-slate-950/45 px-4 py-2 text-sm leading-5 text-slate-300 backdrop-blur-xl"
+                className="localized-copy tap-target inline-flex min-w-0 items-center gap-2 rounded-full border border-slate-200 bg-white/78 px-4 py-2 text-sm leading-5 text-slate-700 shadow-sm backdrop-blur-xl"
               >
                 <CheckCircle2
                   className="h-4 w-4 text-gold"
@@ -136,56 +130,22 @@ export function Hero({ language, region }: HeroProps) {
           </div>
         </Reveal>
 
-        <Reveal className="relative min-h-0 md:min-h-[560px]">
-          <div className="absolute inset-0 hidden rounded-[2rem] border border-white/10 bg-slate-950/25 backdrop-blur-sm md:block" />
-
-          <div className="relative flex min-h-0 flex-col gap-4 rounded-[2rem] md:min-h-[560px] md:px-8 md:py-10">
-            <div className="relative rounded-[1.75rem] border border-white/10 bg-black/55 p-5 shadow-2xl backdrop-blur-2xl md:p-7 md:motion-safe:animate-float-soft">
-              <div className="flex flex-wrap items-start justify-between gap-4 border-b border-white/10 pb-5">
-                <div>
-                  <p className="text-xs uppercase tracking-[0.24em] text-gold">
-                    {isEnglish ? "Execution model" : "Modelo de ejecución"}
-                  </p>
-                  <h2 className="localized-copy mt-2 text-2xl font-semibold tracking-[-0.03em] text-white">
-                    {isEnglish
-                      ? "Direct technical partner"
-                      : "Aliado técnico directo"}
-                  </h2>
+        <Reveal className="min-w-0">
+          <div className="grid max-w-5xl gap-3 md:grid-cols-3">
+            {executionSignals.map(({ icon: Icon, label, text }) => (
+              <div
+                key={label}
+                className="min-w-0 rounded-2xl border border-white/40 bg-white/82 p-4 shadow-[0_18px_50px_-38px_rgba(15,23,42,.45)] backdrop-blur-xl"
+              >
+                <div className="flex items-center gap-2 text-sm font-semibold text-slate-950">
+                  <Icon className="h-4 w-4 text-gold" aria-hidden="true" />
+                  {label}
                 </div>
-
-                <span className="localized-copy rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-300">
-                  {isEnglish ? "Lean team" : "Equipo liviano"}
-                </span>
+                <p className="localized-copy mt-1 text-xs leading-5 text-slate-600">
+                  {text}
+                </p>
               </div>
-
-              <div className="mt-6 grid gap-4">
-                {executionSignals.map(({ icon: Icon, label, text }) => (
-                  <div
-                    key={label}
-                    className="grid min-w-0 gap-4 rounded-2xl border border-white/10 bg-white/[0.035] p-4 sm:grid-cols-[auto_1fr]"
-                  >
-                    <div className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl border border-cyan-300/25 bg-cyan-300/10 text-gold">
-                      <Icon className="h-5 w-5" aria-hidden="true" />
-                    </div>
-
-                    <div className="min-w-0">
-                      <h3 className="font-semibold text-white">{label}</h3>
-                      <p className="mt-1 text-sm leading-6 text-slate-400">
-                        {text}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="relative rounded-[1.5rem] border border-white/10 bg-black/50 p-5 backdrop-blur-xl md:mt-auto">
-              <p className="localized-copy text-sm leading-6 text-slate-300">
-                {isEnglish
-                  ? "Built for B2B decision-makers who need working systems, clear priorities and fewer operational bottlenecks."
-                  : "Diseñado para decisores B2B que necesitan sistemas funcionales, prioridades claras y menos cuellos de botella operativos."}
-              </p>
-            </div>
+            ))}
           </div>
         </Reveal>
       </div>

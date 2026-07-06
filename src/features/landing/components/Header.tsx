@@ -10,15 +10,9 @@ type Props = {
   language: Language;
   region: Region;
   onLanguageChange: (language: Language) => void;
-  onRegionChange: (region: Region) => void;
 };
 
-export function Header({
-  language,
-  region,
-  onLanguageChange,
-  onRegionChange,
-}: Props) {
+export function Header({ language, region, onLanguageChange }: Props) {
   const t = copy[language];
 
   const handleNav = (location: string) =>
@@ -29,6 +23,11 @@ export function Header({
       href: "#capacidades",
       label: t.navCapabilities as string,
       title: t.navCapabilities as string,
+    },
+    {
+      href: "#ia-aplicada",
+      label: t.navAI as string,
+      title: t.navAI as string,
     },
     {
       href: "#porque",
@@ -58,8 +57,8 @@ export function Header({
   ];
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#050506]/88 backdrop-blur-2xl transition-all duration-300">
-      <div className="fluid-container flex min-h-20 items-center justify-between gap-2 md:gap-3">
+    <header className="sticky inset-x-0 top-0 z-50 w-full max-w-[100vw] overflow-hidden border-b border-slate-200/80 bg-white/86 shadow-[0_18px_50px_-38px_rgba(15,23,42,.35)] backdrop-blur-2xl transition-all duration-300">
+      <div className="fluid-container flex min-h-20 items-center justify-between gap-3">
         <a
           href="#inicio"
           aria-label="Kangaroo AJ home"
@@ -73,7 +72,7 @@ export function Header({
           aria-label={
             language === "en" ? "Main navigation" : "Navegación principal"
           }
-          className="hidden min-w-0 flex-1 items-center justify-center gap-1 text-xs font-medium text-slate-300 xl:flex 2xl:gap-2 2xl:text-sm"
+          className="hidden min-w-0 flex-1 items-center justify-center gap-1 text-[13px] font-semibold text-slate-600 xl:flex 2xl:gap-2"
         >
           {navItems.map((item) => (
             <a
@@ -81,9 +80,9 @@ export function Header({
               href={item.href}
               title={item.title}
               onClick={() => handleNav(`nav_${item.href.replace("#", "")}`)}
-              className="localized-copy max-w-[8.5rem] rounded-full px-2 py-2 text-center leading-4 transition hover:bg-white/[0.04] hover:text-white focus-visible:text-white 2xl:max-w-none 2xl:px-3 2xl:leading-5"
+              className="max-w-[8.5rem] rounded-full px-2 py-2 text-center leading-5 transition hover:bg-slate-100 hover:text-slate-950 focus-visible:text-slate-950 2xl:max-w-none 2xl:px-3"
             >
-              <span className="block truncate 2xl:whitespace-normal">
+              <span className="block truncate whitespace-nowrap">
                 {item.label}
               </span>
             </a>
@@ -96,28 +95,57 @@ export function Header({
               language={language}
               region={region}
               onLanguageChange={onLanguageChange}
-              onRegionChange={onRegionChange}
             />
           </div>
 
           <a
             href="#contacto"
             onClick={() => handleNav("header_primary")}
-            className="tap-target localized-copy hidden max-w-[12rem] items-center justify-center gap-2 rounded-full bg-gold px-3 py-2.5 text-center text-xs font-bold leading-5 text-slate-950 transition hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0 sm:inline-flex 2xl:max-w-[14rem] 2xl:px-4 2xl:text-sm"
+            className="tap-target hidden max-w-[12rem] items-center justify-center gap-2 rounded-full bg-gold px-3 py-2.5 text-center text-xs font-bold leading-5 text-slate-950 transition hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0 sm:inline-flex 2xl:max-w-[14rem] 2xl:px-4 2xl:text-sm"
           >
-            <span className="truncate">{t.ctaMain}</span>
+            <span className="truncate whitespace-nowrap">{t.ctaMain}</span>
             <ArrowRight className="h-4 w-4 shrink-0" aria-hidden="true" />
           </a>
         </div>
       </div>
 
-      <div className="border-t border-white/10 px-4 py-3 lg:hidden">
+      <div className="w-full max-w-full overflow-hidden border-t border-slate-200/80 px-4 py-3 lg:hidden">
         <LanguageRegionSelector
           language={language}
           region={region}
           onLanguageChange={onLanguageChange}
-          onRegionChange={onRegionChange}
         />
+
+        <nav
+          aria-label={
+            language === "en"
+              ? "Mobile main navigation"
+              : "Navegación principal móvil"
+          }
+          className="mt-3 grid w-full max-w-full grid-cols-1 gap-2 text-sm text-slate-600 sm:flex sm:flex-wrap"
+        >
+          {navItems.slice(0, 5).map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              title={item.title}
+              onClick={() =>
+                handleNav(`mobile_nav_${item.href.replace("#", "")}`)
+              }
+              className="tap-target inline-flex min-w-0 items-center justify-center rounded-full border border-slate-200 bg-white px-3 py-2 text-center leading-5 shadow-sm transition hover:border-cyan-300/50 hover:text-slate-950 sm:shrink-0 sm:whitespace-nowrap"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+        <a
+          href="#contacto"
+          onClick={() => handleNav("mobile_header_primary")}
+          className="tap-target mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold px-4 py-2.5 text-center text-sm font-bold leading-5 text-slate-950 sm:hidden"
+        >
+          <span>{t.ctaMain}</span>
+          <ArrowRight className="h-4 w-4 shrink-0" aria-hidden="true" />
+        </a>
       </div>
     </header>
   );
