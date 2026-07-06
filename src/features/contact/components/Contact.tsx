@@ -1,8 +1,7 @@
 import { useRef } from "react";
 import { Mail, MessageCircle, Send } from "lucide-react";
-import contactEnterpriseImg from "@/assets/contact-enterprise.webp";
+import contactEnterpriseImg from "@/assets/kangaroo-enterprise-operations.webp";
 import { trackEvent } from "@/lib/analytics";
-import { SectionBackground } from "@/components/SectionBackground";
 import { copy } from "@/features/i18n/constants/copy";
 import type { Language } from "@/features/i18n/types/language.types";
 import type { Region } from "@/features/region/types/region.types";
@@ -39,29 +38,22 @@ export function Contact({
   return (
     <section
       id="contacto"
-      className="section-bg section-contained border-t border-white/10 py-24"
+      className="section-bg section-contained border-t border-slate-200/80 py-24"
     >
-      <SectionBackground
-        image={contactEnterpriseImg}
-        position="center"
-        opacity={0.22}
-        overlay="strong"
-      />
-
       <Reveal className="relative z-10 fluid-container max-w-6xl">
-        <div className="grid min-w-0 gap-8 overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.045] p-4 shadow-2xl backdrop-blur-xl sm:p-5 md:p-8 lg:grid-cols-[.9fr_1.1fr]">
-          <div className="relative min-w-0 overflow-hidden rounded-3xl border border-white/10 bg-slate-950/45 p-5 sm:p-7 md:p-8">
+        <div className="grid min-w-0 gap-8 overflow-hidden rounded-2xl border border-slate-200 bg-white/88 p-4 shadow-[0_28px_90px_-55px_rgba(15,23,42,.42)] backdrop-blur-xl sm:p-5 md:p-8 lg:grid-cols-[.9fr_1.1fr]">
+          <div className="relative min-w-0 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 p-5 sm:p-7 md:p-8">
             <div className="absolute inset-0 -z-10">
               <img
                 src={contactEnterpriseImg}
                 alt="Technology partner discussing business workflows, software delivery and process automation with a client"
                 loading="lazy"
                 decoding="async"
-                width={2560}
-                height={1440}
-                className="h-full w-full object-cover opacity-35"
+                width={1536}
+                height={1024}
+                className="h-full w-full object-cover opacity-62"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/72 via-black/84 to-black" />
+              <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/76 to-slate-950" />
             </div>
 
             <p className="localized-copy text-xs font-semibold uppercase tracking-[0.22em] text-gold sm:tracking-[0.28em]">
@@ -130,7 +122,7 @@ export function Contact({
           </div>
 
           <form
-            className="grid min-w-0 gap-4 rounded-3xl border border-white/10 bg-black/28 p-4 sm:p-5 md:p-6"
+            className="grid min-w-0 gap-4 rounded-2xl border border-slate-200 bg-slate-50/75 p-4 sm:p-5 md:p-6"
             noValidate
             onSubmit={handleSubmit((data) => {
               markSubmitted();
@@ -139,13 +131,39 @@ export function Contact({
                 region,
                 acceptedPrivacy: data.acceptedPrivacy,
               });
+
+              const selectedService = services.find(
+                (service) => service.key === data.service,
+              );
+              const serviceLabel = selectedService
+                ? isEnglish
+                  ? selectedService.enTitle
+                  : selectedService.esTitle
+                : isEnglish
+                  ? "Not specified"
+                  : "No especificado";
+              const subject = isEnglish
+                ? `Commercial inquiry - ${serviceLabel}`
+                : `Consulta comercial - ${serviceLabel}`;
+              const body = [
+                `${isEnglish ? "Name" : "Nombre"}: ${data.name}`,
+                `${isEnglish ? "Company" : "Empresa"}: ${data.company || "-"}`,
+                `${isEnglish ? "Email" : "Correo"}: ${data.email}`,
+                `${isEnglish ? "Phone" : "Telefono"}: ${data.phone || "-"}`,
+                `${isEnglish ? "Service" : "Servicio"}: ${serviceLabel}`,
+                "",
+                `${isEnglish ? "Message" : "Mensaje"}:`,
+                data.message,
+              ].join("\n");
+
+              globalThis.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             }, resetSubmitted)}
           >
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
                 {isEnglish ? "Commercial inquiry" : "Consulta comercial"}
               </p>
-              <h3 className="mt-2 text-2xl font-semibold tracking-[-0.03em] text-white">
+              <h3 className="mt-2 text-2xl font-semibold tracking-[-0.03em] text-slate-950">
                 {isEnglish
                   ? "Tell us what you need to improve."
                   : "Cuéntanos qué necesitas mejorar."}
@@ -191,10 +209,10 @@ export function Contact({
               />
             </div>
 
-            <label className="grid gap-2 text-sm font-medium text-slate-300">
+            <label className="grid gap-2 text-sm font-medium text-slate-700">
               <span>
                 {t.formService}
-                <span className="ml-1 text-cyan-200">*</span>
+                <span className="ml-1 text-teal-600">*</span>
               </span>
               <select
                 {...register("service")}
@@ -204,14 +222,14 @@ export function Contact({
                   getFieldError("service") ? "service-error" : undefined
                 }
                 onFocus={trackStart}
-                className="min-h-12 w-full rounded-2xl border border-white/10 bg-slate-950/55 px-4 py-2 text-white outline-none ring-cyan-300/40 transition hover:border-white/20 focus:ring-2"
+                className="min-h-12 w-full rounded-2xl border border-slate-200 bg-white px-4 py-2 text-slate-950 outline-none ring-cyan-300/40 transition hover:border-cyan-300/60 focus:ring-2"
               >
                 <option value="">
                   {isEnglish ? "Select an option" : "Selecciona una opción"}
                 </option>
 
                 {services.map((service) => (
-                  <option key={service.enTitle}>
+                  <option key={service.key} value={service.key}>
                     {isEnglish ? service.enTitle : service.esTitle}
                   </option>
                 ))}
@@ -221,17 +239,17 @@ export function Contact({
                 <span
                   id="service-error"
                   role="alert"
-                  className="text-xs text-red-300"
+                  className="text-xs text-red-600"
                 >
                   {getFieldError("service")}
                 </span>
               )}
             </label>
 
-            <label className="grid gap-2 text-sm font-medium text-slate-300">
+            <label className="grid gap-2 text-sm font-medium text-slate-700">
               <span>
                 {t.formMessage}
-                <span className="ml-1 text-cyan-200">*</span>
+                <span className="ml-1 text-teal-600">*</span>
               </span>
               <textarea
                 {...register("message")}
@@ -242,7 +260,7 @@ export function Contact({
                   getFieldError("message") ? "message-error" : undefined
                 }
                 onFocus={trackStart}
-                className="min-h-36 w-full resize-y rounded-2xl border border-white/10 bg-slate-950/55 px-4 py-3 text-white outline-none ring-cyan-300/40 transition placeholder:text-slate-600 hover:border-white/20 focus:ring-2"
+                className="min-h-36 w-full resize-y rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-950 outline-none ring-cyan-300/40 transition placeholder:text-slate-400 hover:border-cyan-300/60 focus:ring-2"
                 placeholder={t.formPlaceholder as string}
               />
 
@@ -250,14 +268,14 @@ export function Contact({
                 <span
                   id="message-error"
                   role="alert"
-                  className="text-xs text-red-300"
+                  className="text-xs text-red-600"
                 >
                   {getFieldError("message")}
                 </span>
               )}
             </label>
 
-            <label className="flex min-w-0 items-start gap-3 rounded-2xl border border-white/10 bg-slate-950/40 p-4 text-sm leading-6 text-slate-300">
+            <label className="flex min-w-0 items-start gap-3 rounded-2xl border border-slate-200 bg-white p-4 text-sm leading-6 text-slate-700">
               <input
                 type="checkbox"
                 {...register("acceptedPrivacy")}
@@ -288,7 +306,7 @@ export function Contact({
               <span
                 id="acceptedPrivacy-error"
                 role="alert"
-                className="text-xs text-red-300"
+                className="text-xs text-red-600"
               >
                 {getFieldError("acceptedPrivacy")}
               </span>
@@ -311,9 +329,11 @@ export function Contact({
             {submitted && (
               <p
                 role="status"
-                className="rounded-2xl border border-cyan-300/25 bg-cyan-300/10 p-4 text-sm text-cyan-100"
+                className="rounded-2xl border border-cyan-200 bg-cyan-50 p-4 text-sm text-teal-800"
               >
-                {t.formSuccess}
+                {isEnglish
+                  ? "Your email client should open with the inquiry ready to send."
+                  : "Tu cliente de correo debe abrirse con la consulta lista para enviar."}
               </p>
             )}
           </form>

@@ -35,28 +35,28 @@ export function CookieConsentBanner({ language, region }: Props) {
 
   return (
     <div
-      className="fixed inset-x-3 bottom-3 z-[100] mx-auto max-h-[calc(100svh-1.5rem)] max-w-5xl overflow-y-auto rounded-3xl border border-cyan-300/20 bg-[#0A0A0F]/95 p-4 shadow-2xl backdrop-blur-2xl motion-safe:transition motion-safe:duration-500 sm:inset-x-4 sm:bottom-4 sm:p-5"
+      className="fixed inset-x-3 bottom-3 z-[100] ml-auto max-h-[calc(100svh-1.5rem)] max-w-3xl overflow-y-auto rounded-3xl border border-slate-200 bg-white/95 p-4 shadow-2xl backdrop-blur-2xl motion-safe:transition motion-safe:duration-500 sm:inset-x-4 sm:bottom-4 sm:p-5"
       role="region"
       aria-label={isEnglish ? "Cookie preferences" : "Preferencias de cookies"}
     >
-      <div className="absolute inset-0 -z-10 rounded-3xl bg-[radial-gradient(circle_at_10%_0%,rgba(0,229,255,.12),transparent_36%),radial-gradient(circle_at_100%_40%,rgba(139,92,246,.12),transparent_36%)]" />
+      <div className="absolute inset-0 -z-10 rounded-3xl bg-[radial-gradient(circle_at_10%_0%,rgba(0,224,184,.12),transparent_36%),radial-gradient(circle_at_100%_40%,rgba(217,119,6,.1),transparent_36%)]" />
 
       <div className="grid min-w-0 gap-5 md:grid-cols-[minmax(0,1fr)_auto] md:items-center">
         <div>
-          <h3 className="text-base font-semibold text-white">
+          <h3 className="text-base font-semibold text-slate-950">
             {isEnglish
               ? "Privacy & Cookie Preferences"
               : "Preferencias de privacidad y cookies"}
           </h3>
 
-          <p className="localized-copy mt-2 text-sm leading-relaxed text-slate-400">
+          <p className="localized-copy mt-2 text-sm leading-relaxed text-slate-600">
             {isEnglish
               ? "We use necessary cookies to operate this website and optional analytics cookies to understand site performance. You can accept, reject or customize your preferences."
               : "Usamos cookies necesarias para operar este sitio y cookies analíticas opcionales para entender el rendimiento del sitio. Puedes aceptar, rechazar o personalizar tus preferencias."}
           </p>
 
           {customize && (
-            <div className="mt-4 grid gap-3 text-sm text-slate-300">
+            <div className="mt-4 grid gap-3 text-sm text-slate-700">
               <label className="flex items-center gap-3">
                 <input
                   type="checkbox"
@@ -96,7 +96,7 @@ export function CookieConsentBanner({ language, region }: Props) {
           <button
             type="button"
             onClick={() => persist(false, false)}
-            className="tap-target localized-copy rounded-full border border-white/15 px-4 py-2 text-sm font-semibold leading-5 text-white/85 transition hover:-translate-y-0.5 hover:bg-white/5"
+            className="tap-target localized-copy rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold leading-5 text-slate-700 transition hover:-translate-y-0.5 hover:bg-slate-50"
           >
             {isEnglish ? "Reject optional cookies" : "Rechazar opcionales"}
           </button>
@@ -104,7 +104,7 @@ export function CookieConsentBanner({ language, region }: Props) {
           <button
             type="button"
             onClick={() => setCustomize((value) => !value)}
-            className="tap-target localized-copy rounded-full border border-white/15 px-4 py-2 text-sm font-semibold leading-5 text-white/85 transition hover:-translate-y-0.5 hover:bg-white/5"
+            className="tap-target localized-copy rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold leading-5 text-slate-700 transition hover:-translate-y-0.5 hover:bg-slate-50"
             aria-expanded={customize}
           >
             {isEnglish ? "Customize" : "Personalizar"}

@@ -1,6 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
 import operationsImg from "@/assets/data-automation.webp";
-import { SectionBackground } from "@/components/SectionBackground";
 import { SectionHeader } from "@/components/SectionHeader";
 import { copy } from "@/features/i18n/constants/copy";
 import type { Language } from "@/features/i18n/types/language.types";
@@ -15,15 +14,8 @@ export function IndustriesOperations({ language }: { language: Language }) {
   return (
     <section
       id="industrias"
-      className="section-bg section-contained border-t border-white/10 py-24"
+      className="section-bg section-contained border-t border-slate-200/80 py-24"
     >
-      <SectionBackground
-        image={operationsImg}
-        position="center"
-        opacity={0.2}
-        overlay="dark"
-      />
-
       <Reveal className="relative z-10 mx-auto grid max-w-7xl gap-12 px-5 md:px-8 lg:grid-cols-[.92fr_1.08fr] lg:items-center">
         <ImagePanel
           image={operationsImg}
@@ -53,7 +45,7 @@ export function IndustriesOperations({ language }: { language: Language }) {
             {industries[language].map((item) => (
               <div
                 key={item}
-                className="localized-copy flex min-h-20 min-w-0 items-start gap-3 rounded-2xl border border-white/10 bg-black/40 p-4 text-sm leading-6 text-slate-300 backdrop-blur-xl transition hover:-translate-y-1 hover:border-cyan-300/35 hover:text-white"
+                className="localized-copy flex min-h-20 min-w-0 items-start gap-3 rounded-2xl border border-slate-200 bg-white/88 p-4 text-sm leading-6 text-slate-700 shadow-sm backdrop-blur-xl transition hover:-translate-y-1 hover:border-cyan-300/50 hover:text-slate-950"
               >
                 <CheckCircle2
                   className="mt-0.5 h-5 w-5 shrink-0 text-gold"
@@ -68,7 +60,7 @@ export function IndustriesOperations({ language }: { language: Language }) {
             {marketSignals[language].map((market) => (
               <span
                 key={market}
-                className="localized-copy rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm leading-5 text-slate-300 backdrop-blur-xl"
+                className="localized-copy rounded-full border border-slate-200 bg-white px-4 py-2 text-sm leading-5 text-slate-700 shadow-sm backdrop-blur-xl"
               >
                 {market}
               </span>

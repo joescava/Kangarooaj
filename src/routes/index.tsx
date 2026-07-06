@@ -1,5 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { lazy, Suspense } from "react";
+import {
+  SITE_DESCRIPTION,
+  SITE_OG_IMAGE,
+  SITE_TITLE,
+  SITE_URL,
+} from "@/config/site";
 
 const LandingPage = lazy(() =>
   import("@/features/landing/components/LandingPage").then((module) => ({
@@ -10,25 +16,43 @@ const LandingPage = lazy(() =>
 export const Route = createFileRoute("/")({
   component: RouteComponent,
   head: () => ({
+    links: [
+      {
+        rel: "canonical",
+        href: SITE_URL,
+      },
+      {
+        rel: "alternate",
+        hrefLang: "en-US",
+        href: SITE_URL,
+      },
+      {
+        rel: "alternate",
+        hrefLang: "es-CO",
+        href: SITE_URL,
+      },
+      {
+        rel: "alternate",
+        hrefLang: "x-default",
+        href: SITE_URL,
+      },
+    ],
     meta: [
       {
-        title:
-          "Kangaroo AJ | Senior Software, Automation & Applied AI for B2B Operations",
+        title: SITE_TITLE,
       },
       {
         name: "description",
-        content:
-          "Kangaroo AJ gives B2B companies in the United States, Colombia and global remote-first markets direct access to senior software engineering, business automation and applied AI execution.",
+        content: SITE_DESCRIPTION,
       },
       { name: "author", content: "Kangaroo AJ S.A.S." },
       {
         property: "og:title",
-        content: "Kangaroo AJ | Senior Software, Automation & Applied AI",
+        content: SITE_TITLE,
       },
       {
         property: "og:description",
-        content:
-          "Premium boutique senior technology partner for B2B software engineering, business automation and applied AI execution.",
+        content: SITE_DESCRIPTION,
       },
       {
         property: "og:type",
@@ -36,33 +60,27 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:image",
-        content:
-          "https://johancantev.github.io/kangaroo-aj-website/og-image.jpg",
+        content: SITE_OG_IMAGE,
+      },
+      {
+        property: "og:url",
+        content: SITE_URL,
+      },
+      {
+        name: "twitter:title",
+        content: SITE_TITLE,
+      },
+      {
+        name: "twitter:description",
+        content: SITE_DESCRIPTION,
+      },
+      {
+        name: "twitter:image",
+        content: SITE_OG_IMAGE,
       },
       {
         name: "twitter:card",
         content: "summary_large_image",
-      },
-    ],
-    links: [
-      {
-        rel: "canonical",
-        href: "https://johancantev.github.io/kangaroo-aj-website/",
-      },
-      {
-        rel: "alternate",
-        hrefLang: "en-US",
-        href: "https://johancantev.github.io/kangaroo-aj-website/",
-      },
-      {
-        rel: "alternate",
-        hrefLang: "es-CO",
-        href: "https://johancantev.github.io/kangaroo-aj-website/",
-      },
-      {
-        rel: "alternate",
-        hrefLang: "x-default",
-        href: "https://johancantev.github.io/kangaroo-aj-website/",
       },
     ],
   }),

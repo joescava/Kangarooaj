@@ -16,14 +16,13 @@ export const copy = {
     navAI: "AI automation",
     navProcess: "Delivery model",
 
-    ctaMain: "Start a conversation",
-    ctaSecondary: "Explore services",
+    ctaMain: "Request assessment",
+    ctaSecondary: "View capabilities",
 
-    heroBadge: "Custom software, automation and AI for B2B teams",
-    heroTitle:
-      "Custom software and business automation for companies that need reliable execution.",
+    heroBadge: "Software, automation and applied AI",
+    heroTitle: "Software and AI for companies that need to move faster.",
     heroSubtitle:
-      "We help B2B companies in the United States, Colombia and global markets build internal platforms, integrate systems, automate workflows and turn data into practical decisions.",
+      "We design custom software, workflow automation, data platforms and AI-assisted systems for B2B teams that need reliable execution, cleaner operations and practical decisions.",
 
     benefits: [
       "Custom software development",
@@ -41,14 +40,14 @@ export const copy = {
 
     servicesEyebrow: "Services",
     servicesTitle:
-      "Software, automation, data and AI services for B2B operations.",
+      "Clear services for business processes that cannot stay manual.",
     servicesText:
-      "Focused delivery for companies that need internal platforms, workflow automation, integrations, dashboards and practical AI without the overhead of traditional consulting.",
+      "Focused delivery for companies that need internal platforms, workflow automation, integrations, dashboards and practical AI without unnecessary consulting overhead.",
 
     aiEyebrow: "AI automation",
     aiTitle: "AI that supports real business workflows.",
     aiText:
-      "We apply AI where it can classify information, summarize documents, assist users, accelerate reporting or reduce repetitive work inside existing processes.",
+      "We apply AI where it can classify information, summarize documents, assist users, accelerate reporting or reduce repetitive work inside existing processes, with architecture, data access and review controls in mind.",
     aiNote:
       "AI should reduce operational load, not add another tool to manage.",
 
@@ -124,14 +123,14 @@ export const copy = {
     navAI: "Automatización con IA",
     navProcess: "Modelo de entrega",
 
-    ctaMain: "Iniciar conversación",
-    ctaSecondary: "Ver servicios",
+    ctaMain: "Solicitar diagnóstico",
+    ctaSecondary: "Ver capacidades",
 
-    heroBadge: "Software, automatización e IA para empresas B2B",
+    heroBadge: "Software, automatización e IA aplicada",
     heroTitle:
-      "Desarrollo de software y automatización empresarial para operar mejor.",
+      "Software e IA aplicada para empresas que necesitan avanzar más rápido.",
     heroSubtitle:
-      "Ayudamos a empresas en Colombia, Estados Unidos y mercados globales a construir plataformas internas, integrar sistemas, automatizar flujos y convertir datos en decisiones prácticas.",
+      "Diseñamos software a la medida, automatización de procesos, plataformas de datos y sistemas asistidos por IA para equipos B2B que necesitan ejecución confiable, operaciones más limpias y decisiones prácticas.",
 
     benefits: [
       "Software a la medida",
@@ -148,14 +147,15 @@ export const copy = {
       "Muchos equipos B2B pierden tiempo y visibilidad cuando sus procesos dependen de digitación repetida, herramientas aisladas y poca claridad sobre quién controla cada sistema.",
 
     servicesEyebrow: "Servicios",
-    servicesTitle: "Software, automatización, datos e IA para operaciones B2B.",
+    servicesTitle:
+      "Servicios claros para procesos de negocio que no pueden seguir manuales.",
     servicesText:
-      "Entrega enfocada para empresas que necesitan plataformas internas, automatización de flujos, integraciones, tableros e IA práctica sin la carga de una consultoría tradicional.",
+      "Entrega enfocada para empresas que necesitan plataformas internas, automatización de flujos, integraciones, tableros e IA práctica sin carga consultiva innecesaria.",
 
     aiEyebrow: "Automatización con IA",
     aiTitle: "IA práctica para flujos reales de negocio.",
     aiText:
-      "Aplicamos IA donde puede clasificar información, resumir documentos, asistir usuarios, acelerar reportes o reducir tareas repetitivas dentro de procesos existentes.",
+      "Aplicamos IA donde puede clasificar información, resumir documentos, asistir usuarios, acelerar reportes o reducir tareas repetitivas dentro de procesos existentes, considerando arquitectura, acceso a datos y controles de revisión.",
     aiNote:
       "La IA debe reducir carga operativa, no sumar otra herramienta difícil de mantener.",
 
@@ -190,7 +190,7 @@ export const copy = {
     techText:
       "Desde arquitectura frontend hasta APIs, modelos relacionales, integraciones, tableros y asistentes de IA, construimos pensando en mantenibilidad, seguridad y adopción.",
 
-    ctaTitle: "¿Necesitas mejorar un proceso, sistema o flujo de trabajo?",
+    ctaTitle: "¿Necesitas modernizar un proceso, sistema o flujo de trabajo?",
     ctaText:
       "Empieza con una conversación enfocada sobre el proceso de negocio, los cuellos de botella actuales y el camino más seguro para construir, automatizar o integrar.",
     ctaSecondaryText: "Ver modelo de entrega",
