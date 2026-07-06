@@ -30,12 +30,12 @@ export function Footer({ language, region }: FooterProps) {
   ];
 
   return (
-    <footer className="border-t border-white/10 bg-[#050506] py-14">
+    <footer className="border-t border-slate-200/80 bg-white py-14">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 md:px-8 lg:grid-cols-[1.1fr_.9fr_.9fr_.9fr]">
         <div>
           <Logo />
 
-          <p className="mt-6 max-w-sm text-sm leading-6 text-slate-400">
+          <p className="mt-6 max-w-sm text-sm leading-6 text-slate-600">
             {isEnglish
               ? "Custom software, business automation, data platforms and practical AI for B2B companies."
               : "Software a la medida, automatización empresarial, plataformas de datos e IA práctica para empresas B2B."}
@@ -53,7 +53,7 @@ export function Footer({ language, region }: FooterProps) {
                   region,
                 })
               }
-              className="inline-flex min-h-10 items-center gap-2 rounded-full border border-white/10 px-3 py-2 text-sm text-slate-300 transition hover:border-cyan-300/40 hover:text-white"
+              className="inline-flex min-h-10 items-center gap-2 rounded-full border border-slate-200 px-3 py-2 text-sm text-slate-700 transition hover:border-cyan-300/50 hover:text-slate-950"
             >
               <MessageCircle className="h-4 w-4 text-gold" aria-hidden="true" />
               {CONTACT_PHONE_LABEL}
@@ -68,7 +68,7 @@ export function Footer({ language, region }: FooterProps) {
                   region,
                 })
               }
-              className="inline-flex min-h-10 items-center gap-2 rounded-full border border-white/10 px-3 py-2 text-sm text-slate-300 transition hover:border-cyan-300/40 hover:text-white"
+              className="inline-flex min-h-10 items-center gap-2 rounded-full border border-slate-200 px-3 py-2 text-sm text-slate-700 transition hover:border-cyan-300/50 hover:text-slate-950"
             >
               <Mail className="h-4 w-4 text-gold" aria-hidden="true" />
               {CONTACT_EMAIL}
@@ -77,16 +77,16 @@ export function Footer({ language, region }: FooterProps) {
         </div>
 
         <div>
-          <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-white">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-950">
             {isEnglish ? "Services" : "Servicios"}
           </h2>
 
-          <ul className="mt-5 space-y-3 text-sm text-slate-400">
+          <ul className="mt-5 space-y-3 text-sm text-slate-600">
             {services.slice(0, 6).map((service) => (
               <li key={service.enTitle}>
                 <a
                   href="#capacidades"
-                  className="transition hover:text-white"
+                  className="transition hover:text-slate-950"
                   onClick={() =>
                     trackEvent("cta_click", {
                       location: "footer_service",
@@ -104,14 +104,14 @@ export function Footer({ language, region }: FooterProps) {
         </div>
 
         <div>
-          <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-white">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-950">
             {isEnglish ? "Site" : "Sitio"}
           </h2>
 
-          <ul className="mt-5 space-y-3 text-sm text-slate-400">
+          <ul className="mt-5 space-y-3 text-sm text-slate-600">
             {links.map((link) => (
               <li key={link.href}>
-                <a href={link.href} className="transition hover:text-white">
+                <a href={link.href} className="transition hover:text-slate-950">
                   {link.label}
                 </a>
               </li>
@@ -120,15 +120,15 @@ export function Footer({ language, region }: FooterProps) {
         </div>
 
         <div>
-          <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-white">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-950">
             {isEnglish ? "Policies" : "Políticas"}
           </h2>
 
-          <ul className="mt-5 space-y-3 text-sm text-slate-400">
+          <ul className="mt-5 space-y-3 text-sm text-slate-600">
             <li>
               <a
                 href="/privacy-policy.html"
-                className="transition hover:text-white"
+                className="transition hover:text-slate-950"
               >
                 {isEnglish ? "Privacy policy" : "Política de privacidad"}
               </a>
@@ -137,7 +137,7 @@ export function Footer({ language, region }: FooterProps) {
             <li>
               <a
                 href="/data-treatment-policy.html"
-                className="transition hover:text-white"
+                className="transition hover:text-slate-950"
               >
                 {isEnglish
                   ? "Data treatment policy"
