@@ -193,40 +193,6 @@ export const marketSignals = {
   es: ["Estados Unidos", "Colombia", "Equipos globales remotos"],
 } satisfies Record<Language, string[]>;
 
-export const problems = {
-  en: [
-    "Manual work slows growth.",
-    "Disconnected tools create repeated data entry.",
-    "Spreadsheets become operational bottlenecks.",
-    "Teams lack reliable visibility.",
-  ],
-  es: [
-    "El trabajo manual frena el crecimiento.",
-    "Las herramientas desconectadas duplican digitación.",
-    "Las hojas de cálculo se vuelven cuellos de botella.",
-    "Los equipos pierden visibilidad confiable.",
-  ],
-};
-
-export const solutions = {
-  en: [
-    "Custom software",
-    "Workflow automation",
-    "Data and dashboards",
-    "AI-assisted operations",
-    "Secure integrations",
-    "Technical architecture",
-  ],
-  es: [
-    "Software a la medida",
-    "Automatización de flujos",
-    "Datos y tableros",
-    "Operaciones asistidas por IA",
-    "Integraciones seguras",
-    "Arquitectura técnica",
-  ],
-};
-
 export const aiItems = {
   en: [
     "Document and data classification",
@@ -245,5 +211,3 @@ export const aiItems = {
     "Recomendaciones de flujo",
   ],
 };
-
-export const steps = deliverySteps;
