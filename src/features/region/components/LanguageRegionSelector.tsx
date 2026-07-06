@@ -11,7 +11,13 @@ type Props = {
   tone?: "light" | "dark";
 };
 
-export function LanguageRegionSelector({ language, region, onLanguageChange, className, tone = "light" }: Props) {
+export function LanguageRegionSelector({
+  language,
+  region,
+  onLanguageChange,
+  className,
+  tone = "light",
+}: Props) {
   const changeLanguage = (nextLanguage: Language) => {
     if (nextLanguage !== language) {
       trackEvent("language_change", {
@@ -40,7 +46,7 @@ export function LanguageRegionSelector({ language, region, onLanguageChange, cla
         tone === "dark"
           ? "inline-flex min-w-0 items-center gap-1 rounded-full border border-white/10 bg-white/8 p-0.5 text-xs text-white shadow-[0_20px_60px_-40px_rgba(0,0,0,.7)] backdrop-blur-xl"
           : "inline-flex min-w-0 items-center gap-1 rounded-full border border-slate-200 bg-white/82 p-0.5 text-xs shadow-sm backdrop-blur-xl",
-        className
+        className,
       )}
       aria-label={language === "en" ? "Language" : "Idioma"}
     >

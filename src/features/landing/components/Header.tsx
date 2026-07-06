@@ -118,7 +118,11 @@ export function Header({ language, region, onLanguageChange }: Props) {
   }, [menuOpen]);
 
   const mobileMenu = menuOpen ? (
-    <div className="fixed inset-0 z-[9999] xl:hidden" role="presentation" onClick={closeMenu}>
+    <div
+      className="fixed inset-0 z-[9999] xl:hidden"
+      role="presentation"
+      onClick={closeMenu}
+    >
       <div className="absolute inset-0 bg-black/66" />
 
       <div
@@ -144,7 +148,11 @@ export function Header({ language, region, onLanguageChange }: Props) {
           id="mobile-navigation"
           role="dialog"
           aria-modal="true"
-          aria-label={language === "en" ? "Mobile navigation menu" : "Menú de navegación móvil"}
+          aria-label={
+            language === "en"
+              ? "Mobile navigation menu"
+              : "Menú de navegación móvil"
+          }
           className="mt-5 flex min-h-0 flex-1 flex-col overflow-y-auto overscroll-contain pr-1 [scrollbar-width:none] sm:mt-6"
         >
           <div className="border-b border-white/12 pb-3">
@@ -158,7 +166,11 @@ export function Header({ language, region, onLanguageChange }: Props) {
           </div>
 
           <nav
-            aria-label={language === "en" ? "Mobile main navigation" : "Navegación principal móvil"}
+            aria-label={
+              language === "en"
+                ? "Mobile main navigation"
+                : "Navegación principal móvil"
+            }
             className="mt-3 flex flex-1 flex-col justify-start"
           >
             {navItems.map((item) => (
@@ -216,7 +228,9 @@ export function Header({ language, region, onLanguageChange }: Props) {
           </a>
 
           <nav
-            aria-label={language === "en" ? "Main navigation" : "Navegación principal"}
+            aria-label={
+              language === "en" ? "Main navigation" : "Navegación principal"
+            }
             className="hidden min-w-0 flex-1 items-center justify-center gap-1 text-[13px] font-semibold text-slate-600 xl:flex 2xl:gap-2"
           >
             {navItems.map((item) => (
@@ -227,14 +241,20 @@ export function Header({ language, region, onLanguageChange }: Props) {
                 onClick={() => handleNav(`nav_${item.href.replace("#", "")}`)}
                 className="max-w-[8.5rem] rounded-full px-2 py-2 text-center leading-5 transition hover:bg-slate-100 hover:text-slate-950 focus-visible:text-slate-950 2xl:max-w-none 2xl:px-3"
               >
-                <span className="block truncate whitespace-nowrap">{item.label}</span>
+                <span className="block truncate whitespace-nowrap">
+                  {item.label}
+                </span>
               </a>
             ))}
           </nav>
 
           <div className="flex min-w-0 shrink-0 items-center gap-1.5 md:gap-3">
             <div className="hidden lg:block">
-              <LanguageRegionSelector language={language} region={region} onLanguageChange={onLanguageChange} />
+              <LanguageRegionSelector
+                language={language}
+                region={region}
+                onLanguageChange={onLanguageChange}
+              />
             </div>
 
             <a
@@ -262,7 +282,7 @@ export function Header({ language, region, onLanguageChange }: Props) {
               onClick={() => setMenuOpen((current) => !current)}
               className={cn(
                 "inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white/90 text-slate-950 shadow-sm transition hover:bg-slate-50 active:scale-[0.98] xl:hidden",
-                menuOpen && "bg-slate-950 text-white hover:bg-slate-950"
+                menuOpen && "bg-slate-950 text-white hover:bg-slate-950",
               )}
             >
               {menuOpen ? (
@@ -275,7 +295,9 @@ export function Header({ language, region, onLanguageChange }: Props) {
         </div>
       </header>
 
-      {portalReady && mobileMenu ? createPortal(mobileMenu, window.document.body) : null}
+      {portalReady && mobileMenu
+        ? createPortal(mobileMenu, window.document.body)
+        : null}
     </>
   );
 }
