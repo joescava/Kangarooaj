@@ -216,13 +216,13 @@ export function Header({ language, region, onLanguageChange }: Props) {
 
   return (
     <>
-      <header className="sticky inset-x-0 top-0 z-50 w-full max-w-[100vw] overflow-visible border-b border-slate-200/80 bg-white/86 shadow-[0_18px_50px_-38px_rgba(15,23,42,.35)] backdrop-blur-2xl transition-all duration-300">
-        <div className="fluid-container flex min-h-14 items-center justify-between gap-2 py-1 sm:min-h-16 sm:gap-3 lg:min-h-16">
+      <header className="site-header sticky inset-x-0 top-0 z-50 w-full max-w-[100vw] overflow-visible">
+        <div className="fluid-container flex min-h-[3.75rem] items-center justify-between gap-2 py-1 sm:min-h-16 sm:gap-3 lg:min-h-[4.25rem]">
           <a
             href="#inicio"
             aria-label="Kangaroo AJ home"
             onClick={() => handleNav("logo")}
-            className="min-w-0 shrink-0 rounded-2xl"
+            className="site-brand-link min-w-0 shrink-0 rounded-xl"
           >
             <Logo compact />
           </a>
@@ -231,7 +231,7 @@ export function Header({ language, region, onLanguageChange }: Props) {
             aria-label={
               language === "en" ? "Main navigation" : "Navegación principal"
             }
-            className="hidden min-w-0 flex-1 items-center justify-center gap-1 text-[13px] font-semibold text-slate-600 xl:flex 2xl:gap-2"
+            className="site-nav hidden min-w-0 flex-1 items-center justify-center gap-0.5 xl:flex 2xl:gap-1"
           >
             {navItems.map((item) => (
               <a
@@ -239,7 +239,7 @@ export function Header({ language, region, onLanguageChange }: Props) {
                 href={item.href}
                 title={item.title}
                 onClick={() => handleNav(`nav_${item.href.replace("#", "")}`)}
-                className="max-w-[8.5rem] rounded-full px-2 py-2 text-center leading-5 transition hover:bg-slate-100 hover:text-slate-950 focus-visible:text-slate-950 2xl:max-w-none 2xl:px-3"
+                className="site-nav-link max-w-[8.5rem] px-2.5 py-3 text-center 2xl:max-w-none 2xl:px-3.5"
               >
                 <span className="block truncate whitespace-nowrap">
                   {item.label}
@@ -260,7 +260,7 @@ export function Header({ language, region, onLanguageChange }: Props) {
             <a
               href="#contacto"
               onClick={() => handleNav("header_primary")}
-              className="hidden max-w-[11rem] items-center justify-center gap-1.5 rounded-full bg-gold px-3 py-1.5 text-center text-[11px] font-bold leading-4 text-slate-950 transition hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0 sm:inline-flex 2xl:max-w-[14rem] 2xl:px-4 2xl:text-sm"
+              className="site-header-cta hidden max-w-[11rem] items-center justify-center gap-2 rounded-full px-3.5 py-2 text-center text-[11px] font-bold leading-4 sm:inline-flex 2xl:max-w-[14rem] 2xl:px-4.5 2xl:text-[13px]"
             >
               <span className="truncate whitespace-nowrap">{t.ctaMain}</span>
               <ArrowRight className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
@@ -281,7 +281,7 @@ export function Header({ language, region, onLanguageChange }: Props) {
               }
               onClick={() => setMenuOpen((current) => !current)}
               className={cn(
-                "inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white/90 text-slate-950 shadow-sm transition hover:bg-slate-50 active:scale-[0.98] xl:hidden",
+                "site-menu-button absolute right-4 top-1/2 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full text-slate-950 transition active:scale-[0.98] sm:right-5 xl:static xl:hidden xl:translate-y-0",
                 menuOpen && "bg-slate-950 text-white hover:bg-slate-950",
               )}
             >
