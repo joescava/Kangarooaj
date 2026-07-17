@@ -8,13 +8,13 @@ type Props = {
 
 export function Logo({ compact = false, tone = "light" }: Props) {
   const markSize = compact
-    ? "h-8 w-8 sm:h-9 sm:w-9"
+    ? "h-9 w-9 sm:h-10 sm:w-10"
     : "h-10 w-10 sm:h-12 sm:w-12";
 
   return (
-    <div className="flex min-w-0 items-center gap-2 sm:gap-3">
+    <div className="flex min-w-0 items-center gap-2.5 sm:gap-3">
       <div
-        className={`${markSize} shrink-0 overflow-hidden rounded-xl bg-transparent sm:rounded-2xl`}
+        className={`${markSize} shrink-0 overflow-hidden rounded-xl bg-transparent`}
       >
         <img
           src={logoImg}
@@ -28,14 +28,14 @@ export function Logo({ compact = false, tone = "light" }: Props) {
       <div className="min-w-0 leading-none">
         <div
           className={cn(
-            "text-[11px] font-bold sm:text-[14px]",
+            "text-[12px] font-extrabold leading-none sm:text-[15px]",
             tone === "dark" ? "text-white" : "text-slate-950",
           )}
         >
           KANGAROO
         </div>
 
-        <div className="mt-0.5 text-[8px] uppercase text-gold sm:text-[10px]">
+        <div className="mt-1 text-[8px] font-semibold uppercase tracking-[0.16em] text-gold sm:text-[9px]">
           AJ SAS
         </div>
       </div>

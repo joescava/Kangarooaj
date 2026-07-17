@@ -19,16 +19,28 @@ export const copy = {
     ctaMain: "Request assessment",
     ctaSecondary: "View capabilities",
 
-    heroBadge: "Software, automation and applied AI",
-    heroTitle: "Software and AI for companies that need to move faster.",
+    heroBadge: "Useful technology for better work",
+    heroTitle: "We help companies work better, with less manual load.",
     heroSubtitle:
-      "We design custom software, workflow automation, data platforms and AI-assisted systems for B2B teams that need reliable execution, cleaner operations and practical decisions.",
+      "We build custom software, automation, data platforms and practical AI so B2B teams can reduce friction, connect their operation and spend less time on work that should not consume the day.",
+    heroSoftwareBadge: "Custom software development",
+    heroSoftwareTitle: "Software built around the way your business works.",
+    heroSoftwareText:
+      "We design internal platforms, portals, APIs and maintainable applications for operations that cannot depend on disconnected tools.",
+    heroAutomationBadge: "Business process automation",
+    heroAutomationTitle: "Connect processes. Remove repetitive work.",
+    heroAutomationText:
+      "We automate workflows, approvals, notifications, reporting and integrations so teams can execute faster with clearer control.",
+    heroAIBadge: "Applied AI and data",
+    heroAITitle: "Practical AI inside real business workflows.",
+    heroAIText:
+      "We connect assistants, copilots and reliable data to measurable workflows, with review, permissions and operational control in mind.",
 
     benefits: [
-      "Custom software development",
-      "Workflow automation",
-      "Systems integration",
-      "Data dashboards",
+      "Less repetitive work",
+      "Connected processes",
+      "Clearer operational data",
+      "Tools people can actually use",
       "Nearshore collaboration",
     ],
 
@@ -126,17 +138,30 @@ export const copy = {
     ctaMain: "Solicitar diagnóstico",
     ctaSecondary: "Ver capacidades",
 
-    heroBadge: "Software, automatización e IA aplicada",
+    heroBadge: "Tecnología útil para trabajar mejor",
     heroTitle:
-      "Software e IA aplicada para empresas que necesitan avanzar más rápido.",
+      "Ayudamos a las empresas a trabajar mejor, con menos carga manual.",
     heroSubtitle:
-      "Diseñamos software a la medida, automatización de procesos, plataformas de datos y sistemas asistidos por IA para equipos B2B que necesitan ejecución confiable, operaciones más limpias y decisiones prácticas.",
+      "Creamos software a la medida, automatización, plataformas de datos e IA práctica para que los equipos B2B reduzcan fricción, conecten su operación y pierdan menos tiempo en tareas que no deberían consumirles el día.",
+    heroSoftwareBadge: "Desarrollo de software a la medida",
+    heroSoftwareTitle:
+      "Software diseñado alrededor de cómo trabaja tu empresa.",
+    heroSoftwareText:
+      "Diseñamos plataformas internas, portales, APIs y aplicaciones mantenibles para operaciones que no pueden depender de herramientas desconectadas.",
+    heroAutomationBadge: "Automatización de procesos empresariales",
+    heroAutomationTitle: "Conecta procesos. Reduce el trabajo repetitivo.",
+    heroAutomationText:
+      "Automatizamos flujos, aprobaciones, notificaciones, reportes e integraciones para que los equipos ejecuten más rápido y con mayor control.",
+    heroAIBadge: "IA aplicada y datos",
+    heroAITitle: "IA práctica dentro de flujos reales de negocio.",
+    heroAIText:
+      "Conectamos asistentes, copilotos y datos confiables a flujos medibles, considerando revisión, permisos y control operativo.",
 
     benefits: [
-      "Software a la medida",
-      "Automatización de procesos",
-      "Integración de sistemas",
-      "Tableros de datos",
+      "Menos trabajo repetitivo",
+      "Procesos conectados",
+      "Datos operativos más claros",
+      "Herramientas que el equipo sí usa",
       "Colaboración nearshore",
     ],
 
